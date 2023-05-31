@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { SquareOfBalls } from "../accents/SquareOfBalls";
-import { services } from "./services.json";
+import services from "./services.json";
 import { GridElement, IGridElement } from "./GridElement";
 export const ServicesGrid = () => {
   return (
@@ -13,7 +13,7 @@ export const ServicesGrid = () => {
         <SquareOfBalls />
         {/* actual grid */}
         <div className="gap-y-3 sm:gap-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((item: IGridElement, i: number) => (
+          {services.services.map((item: IGridElement, i: number) => (
             <GridElement
               key={i}
               serviceImages={item.serviceImages}
