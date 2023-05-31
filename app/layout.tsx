@@ -1,3 +1,4 @@
+"use client";
 import { Parisienne } from "next/font/google";
 const parisienne = Parisienne({
   weight: "400",
