@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Zadbaj o swoje paznokcie, manicure na imprezę urodzinową, święto lub sylwestra? Zarezerwuj manicure na piekniej.pl",
   themeColor: "pink",
   publisher: "wesiudev",
+  manifest: "/manifest.json",
 };
 
 export const dynamic = "force-dynamic";
@@ -26,7 +27,7 @@ export default function RootLayout({
        w-full `}
       >
         {" "}
-        <Header />
+        {/* <Header /> */}
         {children}
       </body>
     </html>

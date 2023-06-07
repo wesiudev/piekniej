@@ -18,11 +18,11 @@ export default async function Home() {
   // console.log(services);
   return (
     <>
-      <GalleryGrid />
+      {/* <GalleryGrid />
       <Announcer />
       <ServicesGrid />
       <Reserve />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
