@@ -27,7 +27,7 @@ export default function RootLayout({
        w-full `}
       >
         {" "}
-        {/* <Header /> */}
+        <Header />
         {children}
       </body>
     </html>
