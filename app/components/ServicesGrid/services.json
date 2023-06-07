@@ -3,50 +3,39 @@
     {
         "serviceName": "Manicure klasyczny",
         "serviceDesc": "Tradycyjny manicure, który obejmuje przycinanie, kształtowanie i polerowanie paznokci oraz pielęgnację skórek.",
-        "serviceImages": [
-            {"src":"https://decocanva.com/_ipx/w_640,q_75/https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048&w=640&q=75"},
-            {"src":"https://decocanva.com/_ipx/w_640,q_75/https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048&w=640&q=75"}
-        ]
+        "serviceImage": 
+            "https://decocanva.com/_ipx/w_640,q_75/https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-161565%3Falt%3Dmedia%26token%3D29b7b6ed-1b5e-4c0f-a342-c5a1f8fd0394?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-161565%3Falt%3Dmedia%26token%3D29b7b6ed-1b5e-4c0f-a342-c5a1f8fd0394&w=640&q=75"
     },
     {
         "serviceName": "Manicure hybrydowy",
         "serviceDesc": "Manicure, który łączy cechy lakieru tradycyjnego i żelowego. Obejmuje nałożenie specjalnego lakieru hybrydowego, który jest utwardzany w lampie UV lub LED, aby zapewnic trwałe i lśniące wykończenie.",
-        "serviceImages": [
-            {"src":"https://decocanva.com/_ipx/w_640,q_75/https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048&w=640&q=75"},
-            {"src":"https://decocanva.com/_ipx/w_640,q_75/https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048&w=640&q=75"}
-        ]
+        "serviceImage": 
+            "https://decocanva.com/_ipx/w_640,q_75/https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-797542%3Falt%3Dmedia%26token%3D0886b7da-b009-4685-8f02-d8fc43e95bf9?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-797542%3Falt%3Dmedia%26token%3D0886b7da-b009-4685-8f02-d8fc43e95bf9&w=640&q=75"
     },
     {
         "serviceName": "Manicure francuski",
         "serviceDesc": "Znany również jako 'manicure na biało'. Polega na malowaniu końcówek paznokci na biało lub jasnym kolorem, a reszta paznokcia pozostaje naturalna lub jest malowana przezroczystym lakierem.",
-        "serviceImages": [
-            {"src":"https://decocanva.com/_ipx/w_640,q_75/https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048&w=640&q=75"},
-            {"src":"https://decocanva.com/_ipx/w_640,q_75/https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048&w=640&q=75"}
-        ]
+        "serviceImage": 
+            "https://decocanva.com/_ipx/w_640,q_75/https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-149510%3Falt%3Dmedia%26token%3D01da8417-b8fc-46fa-80e3-ac72b1e408d3?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-149510%3Falt%3Dmedia%26token%3D01da8417-b8fc-46fa-80e3-ac72b1e408d3&w=640&q=75"
     },
     {
         "serviceName": "Manicure żelowy",
         "serviceDesc": "Manicure wykonywany za pomocą żelu UV lub LED, który jest utwardzany w lampie. Daje długotrwały efekt i wysoki połysk.",
-        "serviceImages": [
-            {"src":"https://decocanva.com/_ipx/w_640,q_75/https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048&w=640&q=75"},
-            {"src":"https://decocanva.com/_ipx/w_640,q_75/https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048&w=640&q=75"}
-        ]
+        "serviceImage": 
+            "https://decocanva.com/_ipx/w_640,q_75/https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-436231%3Falt%3Dmedia%26token%3D7b1c7a3c-f8cc-4ee2-95fa-6d8544951448?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-436231%3Falt%3Dmedia%26token%3D7b1c7a3c-f8cc-4ee2-95fa-6d8544951448&w=640&q=75"
     },
     {
         "serviceName": "Manicure naturalny",
         "serviceDesc": "Prosty manicure, który nie obejmuje malowania paznokci. Polega na pielęgnacji skórek, kształtowaniu paznokci i polerowaniu, aby uzyskać naturalny wygląd.",
-        "serviceImages": [
-            {"src":"https://decocanva.com/_ipx/w_640,q_75/https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048&w=640&q=75"},
-            {"src":"https://decocanva.com/_ipx/w_640,q_75/https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048&w=640&q=75"}
-        ]
+        "serviceImage": 
+            "https://decocanva.com/_ipx/w_640,q_75/https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-611723%3Falt%3Dmedia%26token%3D4746228e-54e5-4710-8e48-05e1c76ee01e?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-611723%3Falt%3Dmedia%26token%3D4746228e-54e5-4710-8e48-05e1c76ee01e&w=640&q=75"
     },
     {
         "serviceName": "Manicure zdobiony",
         "serviceDesc": "Manicure, który obejmuje różnego rodzaju ozdoby na paznokciach, takie jak kryształki, naklejki, brokat, nakładki lub ręcznie malowane wzory.",
-        "serviceImages": [
-            {"src":"https://decocanva.com/_ipx/w_640,q_75/https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048&w=640&q=75"},
-            {"src":"https://decocanva.com/_ipx/w_640,q_75/https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-878298%3Falt%3Dmedia%26token%3D249355f9-94f6-41d6-b671-a56d26ca4048&w=640&q=75"}
-        ]
+        "serviceImage": 
+            "https://decocanva.com/_ipx/w_640,q_75/https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-259454%3Falt%3Dmedia%26token%3Dede41191-0f53-49be-9647-e352e2f84305?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fdecocanva-408fb.appspot.com%2Fo%2Fimage-259454%3Falt%3Dmedia%26token%3Dede41191-0f53-49be-9647-e352e2f84305&w=640&q=75"
     }
+    
 ]
 }

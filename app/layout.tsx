@@ -1,19 +1,41 @@
-"use client";
 import { Parisienne } from "next/font/google";
+import "./globals.css";
+import localFont from "next/font/local";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title:
+    "Piękniej - Pasja Manicure. Zarezerwuj manicure online Anna Żebrowska Grudziądz",
+  description:
+    "Zadbaj o swoje paznokcie, manicure na imprezę urodzinową, święto lub sylwestra? Zarezerwuj manicure na piekniej.pl",
+  themeColor: "pink",
+  publisher: "wesiudev",
+  manifest: "/manifest.json",
+};
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html>
+      <body
+        className={`${cocosharp.variable} ${parisienne.variable}
+       w-full `}
+      >
+        {children}
+      </body>
+    </html>
+  );
+}
+
 const parisienne = Parisienne({
   weight: "400",
   variable: "--font-persisienne",
   subsets: ["latin"],
 });
-import "./globals.css";
-import localFont from "next/font/local";
-import { Footer } from "@/app/components/Footer";
-import { Header } from "./components/Header";
-import { GalleryGrid } from "./components/GalleryGrid";
-import { Announcer } from "./components/Announcer";
-import { Reserve } from "./components/Reserve";
-import { ServicesGrid } from "./components/ServicesGrid/";
-
 const cocosharp = localFont({
   src: [
     {
@@ -50,28 +72,3 @@ const cocosharp = localFont({
   ],
   variable: "--font-cocosharp",
 });
-
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html>
-      <body
-        className={`${cocosharp.variable} ${parisienne.variable}
-       w-full `}
-      >
-        <Header />
-        <GalleryGrid />
-        <Announcer />
-        {children}
-        <ServicesGrid />
-        <Reserve />
-        <Footer />
-      </body>
-    </html>
-  );
-}

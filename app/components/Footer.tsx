@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "@/public/favicon1.png";
+import logo from "@/public/favicon.png";
 import { FaArrowRight, FaInstagram, FaFacebook, FaBlog } from "react-icons/fa";
 import { IoMdSend } from "react-icons/io";
 export const Footer = () => {
