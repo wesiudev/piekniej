@@ -1,13 +1,12 @@
-"use client";
 import Link from "next/link";
 import { FaBlog, FaClock, FaHome, FaPhone } from "react-icons/fa";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { useState } from "react";
 export const Header = () => {
-  const [isPopupOpen, setPopupOpen] = useState<boolean>(false);
-  setTimeout(() => {
-    setPopupOpen(true);
-  }, 5000);
+  // const [isPopupOpen, setPopupOpen] = useState<boolean>(false);
+  // setTimeout(() => {
+  //   setPopupOpen(true);
+  // }, 5000);
   return (
     <div className="w-full bg-rose-300 flex justify-center flex-row z-50 overflow-hidden pb-3">
       <div className="relative flex flex-col lg:flex-row lg:w-[90vw] justify-between mx-auto pt-12 sm:py-12">
@@ -41,7 +40,7 @@ export const Header = () => {
           </Link>
         </div>
       </div>
-      {isPopupOpen && (
+      {/* {isPopupOpen && (
         <div className="hidden pt-6 lg:pt-0 lg:flex sm:justify-end sm:items-end h-full flex-col text-white w-max font-sans text-xl z-10 fixed right-12 bottom-8">
           <div className="bg-rose-400 px-6 py-4 rounded-lg shadow-sm shadow-black relative">
             <button onClick={() => setPopupOpen(false)}>
@@ -53,7 +52,7 @@ export const Header = () => {
             </button>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

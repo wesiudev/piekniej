@@ -1,11 +1,11 @@
-"use client";
+// "use client";
 import { useState } from "react";
 import Calendar from "react-calendar";
 import { FaCalendarCheck, FaCheckSquare } from "react-icons/fa";
 import { BsPatchCheckFill } from "react-icons/bs";
 
 export const Reserve = () => {
-  const [value, onChange] = useState(new Date());
+  // const [value, onChange] = useState(new Date());
   return (
     <div className="font-sans bg-gradient-to-b bg-rose-300 w-full h-max flex items-center py-24">
       <div className="w-full lg:w-[80vw] text-white  bg-yellow-900 py-12 lg:rounded-r-full">

@@ -5,7 +5,9 @@ import { Announcer } from "./components/Announcer";
 import { Reserve } from "./components/Reserve";
 import { ServicesGrid } from "./components/ServicesGrid";
 async function getData() {
-  const req = await fetch("http://localhost:3000/services.json");
+  const req = await fetch(
+    "https://main--grand-pothos-cf1bca.netlify.app/services.json"
+  );
   // Recommendation: handle errors
   if (!req.ok) {
     // This will activate the closest `error.js` Error Boundary
