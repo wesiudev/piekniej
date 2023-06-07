@@ -6,7 +6,7 @@ import { Reserve } from "./components/Reserve";
 import { ServicesGrid } from "./components/ServicesGrid";
 async function getData() {
   const req = await fetch(
-    "https://main--grand-pothos-cf1bca.netlify.app/services.json"
+    "https://main--grand-pothos-cf1bca.netlify.app/api/data"
   );
   // Recommendation: handle errors
   if (!req.ok) {
