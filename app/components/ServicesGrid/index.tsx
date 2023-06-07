@@ -1,12 +1,13 @@
 import { SquareOfBalls } from "../accents/SquareOfBalls";
 import { GridElement } from "./GridElement";
+import services from "./services.json";
 export interface IGridElement {
   serviceName: string;
   serviceDesc: string;
   serviceImage: string;
 }
 
-export const ServicesGrid = ({ services }: { services: IGridElement[] }) => {
+export const ServicesGrid = () => {
   return (
     <div className="w-full h-max flex flex-col justify-center items-center pt-24 bg-rose-300 relative">
       <span className="font-pars text-5xl text-white pb-6 text-center">
@@ -17,7 +18,7 @@ export const ServicesGrid = ({ services }: { services: IGridElement[] }) => {
         <SquareOfBalls />
         {/* actual grid */}
         <div className="gap-3 columns-1 sm:columns-2 lg:columns-3">
-          {services.map((item: IGridElement, i: number) => (
+          {services.services.map((item: IGridElement, i: number) => (
             <GridElement
               key={i}
               serviceImage={item.serviceImage}

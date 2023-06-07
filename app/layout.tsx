@@ -2,6 +2,7 @@ import { Parisienne } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local";
 import { Metadata } from "next";
+import { Header } from "./components/Header";
 export const metadata: Metadata = {
   title:
     "Piękniej - Pasja Manicure. Zarezerwuj manicure online Anna Żebrowska Grudziądz",
@@ -9,7 +10,6 @@ export const metadata: Metadata = {
     "Zadbaj o swoje paznokcie, manicure na imprezę urodzinową, święto lub sylwestra? Zarezerwuj manicure na piekniej.pl",
   themeColor: "pink",
   publisher: "wesiudev",
-  manifest: "/manifest.json",
 };
 
 export const dynamic = "force-dynamic";
@@ -25,6 +25,8 @@ export default function RootLayout({
         className={`${cocosharp.variable} ${parisienne.variable}
        w-full `}
       >
+        {" "}
+        <Header />
         {children}
       </body>
     </html>
