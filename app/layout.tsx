@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   themeColor: "pink",
   publisher: "wesiudev",
   manifest: "/manifest.json",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export const dynamic = "force-dynamic";
