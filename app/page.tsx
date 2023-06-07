@@ -10,7 +10,7 @@ export default async function Home() {
   return (
     <>
       {" "}
-      <Header />
+      {/* <Header /> */}
       <GalleryGrid />
       <Announcer />
       <ServicesGrid services={services.services} />
