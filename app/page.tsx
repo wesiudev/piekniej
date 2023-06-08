@@ -1,5 +1,4 @@
 import { Footer } from "@/app/components/Footer";
-import { Header } from "./components/Header";
 import { GalleryGrid } from "./components/GalleryGrid";
 import { Announcer } from "./components/Announcer";
 import { Reserve } from "./components/Reserve";
@@ -18,11 +17,8 @@ async function getData() {
 }
 export default async function Home() {
   const { services } = await getData();
-  console.log(services);
   return (
     <>
-      {" "}
-      {/* <Header /> */}
       <GalleryGrid />
       <Announcer />
       <ServicesGrid services={services} />

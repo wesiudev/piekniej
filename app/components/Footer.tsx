@@ -35,7 +35,7 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="text-gray-50 flex flex-col justify-center font-sans font-regular mx-auto lg:mx-0 mt-8 lg:mt-0 w-3/4 sm:w-full">
+        <div className="text-gray-50 flex flex-col justify-center font-sans font-regular mx-auto lg:mx-0 mt-8 lg:mt-0 w-3/4 sm:w-full pb-12">
           <div className="text-2xl relative">
             <div className="absolute -left-10 -top-5 rotate-12 text-green-100"></div>{" "}
             Chcesz o coś zapytać?

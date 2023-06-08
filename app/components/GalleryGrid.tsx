@@ -70,10 +70,10 @@ export const GalleryGrid = () => {
       </div>
       <div className="w-full flex justify-center pt-12 sm:pt-6">
         <Link
-          href="instagram.com"
+          href="https://www.instagram.com"
           className="w-max p-3 bg-rose-500 font-sans text-xl text-white flex flex-row items-center group border-2 border-transparent hover:border-white rounded-lg"
         >
-          Zobacz więcej{" "}
+          Zobacz więcej
           <FaArrowRight className="ml-2 group-hover:translate-x-[2px] group-hover:scale-110 duration-150" />
         </Link>
       </div>
