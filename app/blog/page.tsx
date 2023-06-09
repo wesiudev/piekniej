@@ -1,7 +1,7 @@
-import { getData } from "../lib/getData";
+import { getBlogData } from "../lib/getBlogData";
 import { RecentPosts } from "./components/RecentPosts";
 export default async function Blog() {
-  const posts = await getData();
+  const posts = await getBlogData();
   return (
     <div className="w-[90vw] mx-auto">
       <div className="lg:w-1/2">

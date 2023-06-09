@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { IComment, IPost } from "../components/RecentPosts";
-import { getData } from "@/app/lib/getData";
+import { getBlogData } from "@/app/lib/getBlogData";
 export const dynamicParams = false;
 export async function generateStaticParams() {
-  const posts = await getData();
+  const posts = await getBlogData();
   return posts.posts.map((post: IPost) => ({ postId: post.postId }));
 }
 
