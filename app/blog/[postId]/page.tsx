@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { IComment, IPost } from "../components/RecentPosts";
-export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const posts = await fetch(
