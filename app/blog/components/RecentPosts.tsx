@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import Image from "next/image";
 import moment from "moment";
 import "moment/locale/pl";
@@ -23,7 +22,6 @@ export interface IPost {
 }
 
 export const RecentPosts = ({ posts }: { posts: IPost[] }) => {
-  const router = useRouter();
   return (
     <div>
       <h1 className="text-2xl font-sans text-white py-6">Wszystkie posty</h1>
@@ -33,11 +31,7 @@ export const RecentPosts = ({ posts }: { posts: IPost[] }) => {
             key={idx}
             className="bg-rose-500 p-3 rounded-md h-max group cursor-pointer"
           >
-            <button
-              onClick={() =>
-                router.push(`/blog/${polishToEnglish(post.postId)}`)
-              }
-            >
+            <Link href={`/blog/${polishToEnglish(post.postId)}`}>
               <div className="relative overflow-hidden">
                 <div className="absolute right-3 bottom-3 font-pars text-3xl text-white text-opacity-40 z-50">
                   Piękniej
@@ -60,7 +54,7 @@ export const RecentPosts = ({ posts }: { posts: IPost[] }) => {
                   </span>
                 </div>
               </div>
-            </button>
+            </Link>
           </div>
         ))}
       </div>
