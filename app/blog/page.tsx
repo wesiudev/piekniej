@@ -1,5 +1,11 @@
-import { getBlogData } from "../lib/getBlogData";
 import { RecentPosts } from "./components/RecentPosts";
+
+async function getBlogData() {
+  const req = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/blog`);
+  const data = req.json();
+  return data;
+}
+
 export default async function Blog() {
   const posts = await getBlogData();
   return (
