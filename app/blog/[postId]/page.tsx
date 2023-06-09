@@ -3,7 +3,7 @@ import { IComment, IPost } from "../components/RecentPosts";
 
 export async function generateStaticParams() {
   const posts = await fetch(
-    `${process.env.NEXT_PUBLIC_SITE_URL}/api/blog/`
+    `https://grand-pothos-cf1bca.netlify.app/api/blog/`
   ).then((res) => res.json());
 
   return posts.posts.map((post: IPost) => ({ postId: post.postId }));
@@ -11,7 +11,7 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: { params: { postId: string } }) {
   const data = await fetch(
-    `${process.env.NEXT_PUBLIC_SITE_URL}/api/blog/${params.postId}`
+    `https://grand-pothos-cf1bca.netlify.app/api/blog/${params.postId}`
   );
   const { post } = await data.json();
   return (
