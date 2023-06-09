@@ -6,14 +6,18 @@ export async function generateStaticParams() {
     `https://grand-pothos-cf1bca.netlify.app/api/blog/`
   ).then((res) => res.json());
 
-  return posts.posts.map((post: IPost) => ({ postId: post.postId }));
+  return posts.posts.map((post) => ({ postId: post.postId }));
 }
-
-export default async function Page({ params }: { params: { postId: string } }) {
-  const data = await fetch(
+async function getPost(params) {
+  const res = await fetch(
     `https://grand-pothos-cf1bca.netlify.app/api/blog/${params.postId}`
   );
-  const { post } = await data.json();
+  const post = await res.json();
+
+  return post;
+}
+export default async function Page({ params }) {
+  const post = await getPost(params.postId);
   return (
     <>
       <div className="w-[90vw] mx-auto font-sans text-white pb-6">
@@ -31,7 +35,7 @@ export default async function Page({ params }: { params: { postId: string } }) {
             alt=""
           />
           <div className="flex flex-col mt-6 ">
-            {post.content.map((row: string, idx: number) => (
+            {post.content.map((row, idx) => (
               <h2 key={idx} className="text-lg mt-6 bg-rose-500 p-3 rounded-lg">
                 {row}
               </h2>
@@ -40,7 +44,7 @@ export default async function Page({ params }: { params: { postId: string } }) {
         </div>
         <div className="flex flex-col py-6">
           <h1 className="text-4xl">Komentarze</h1>
-          {post.comments.map((comment: IComment, idx: number) => (
+          {post.comments.map((comment, idx) => (
             <div
               key={idx}
               className="w-3/5 h-max bg-rose-500 p-6 mt-6 rounded-md"
