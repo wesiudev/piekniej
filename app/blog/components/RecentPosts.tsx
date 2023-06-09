@@ -34,7 +34,7 @@ export const RecentPosts = ({ posts }: { posts: IPost[] }) => {
             <Link
               href={`${
                 process.env.NEXT_PUBLIC_SITE_URL
-              }/blog/posts/${polishToEnglish(post.postId)}`}
+              }/posts/${polishToEnglish(post.postId)}`}
             >
               <div className="relative overflow-hidden">
                 <div className="absolute right-3 bottom-3 font-pars text-3xl text-white text-opacity-40 z-50">
