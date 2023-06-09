@@ -32,7 +32,7 @@ export const RecentPosts = ({ posts }: { posts: IPost[] }) => {
             className="bg-rose-500 p-3 rounded-md h-max group cursor-pointer"
           >
             <Link
-              href={`${process.env.NEXT_PUBLIC_URL}/blog/${polishToEnglish(
+              href={`${process.env.SITE_URL}/blog/${polishToEnglish(
                 post.postId
               )}`}
             >

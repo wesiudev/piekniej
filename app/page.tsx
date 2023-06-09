@@ -4,7 +4,7 @@ import { Announcer } from "./components/Announcer";
 import { Reserve } from "./components/Reserve";
 import { ServicesGrid } from "./components/ServicesGrid";
 async function getData() {
-  const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/data`);
+  const req = await fetch(`${process.env.SITE_URL}/api/data`);
   // Recommendation: handle errors
   if (!req.ok) {
     // This will activate the closest `error.js` Error Boundary
