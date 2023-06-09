@@ -14,7 +14,6 @@ export async function generateStaticParams() {
 }
 
 async function getPostBySlug(postId: string) {
-  "use server";
   const data = await fetch(
     `${process.env.NEXT_PUBLIC_SITE_URL}/api/blog/${postId}`
   );
