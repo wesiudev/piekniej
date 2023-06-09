@@ -1,5 +1,5 @@
 export async function getBlogData() {
-  const req = await fetch("https://grand-pothos-cf1bca.netlify.app/api/blog");
+  const req = await fetch(`${process.env.SITE_URL}/api/blog`);
   // Recommendation: handle errors
   if (!req.ok) {
     // This will activate the closest `error.js` Error Boundary
