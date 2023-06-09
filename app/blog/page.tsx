@@ -1,5 +1,5 @@
+import { getData } from "../lib/getData";
 import { RecentPosts } from "./components/RecentPosts";
-import moment from "moment";
 export default async function Blog() {
   const posts = await getData();
   return (
@@ -9,15 +9,4 @@ export default async function Blog() {
       </div>
     </div>
   );
-}
-
-export async function getData() {
-  const req = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/blog`);
-  // Recommendation: handle errors
-  if (!req.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
-  }
-  const data = req.json();
-  return data;
 }
