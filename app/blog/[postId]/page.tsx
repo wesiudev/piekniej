@@ -9,6 +9,7 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }: { params: { postId: string } }) {
+  "use server";
   const data = await fetch(
     `${process.env.NEXT_PUBLIC_SITE_URL}/api/blog/${params.postId}`
   );
