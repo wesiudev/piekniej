@@ -1,3 +1,4 @@
+"use server";
 import Image from "next/image";
 import moment from "moment";
 import "moment/locale/pl";
