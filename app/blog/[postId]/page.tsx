@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { IComment, IPost } from "../components/RecentPosts";
-import { getPostBySlug } from "@/app/lib/getPostBySlug";
 import { getBlogData } from "@/app/lib/getBlogData";
 export const dynamicParams = false;
 
@@ -10,7 +9,10 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }: { params: { postId: string } }) {
-  const { post } = await getPostBySlug(params.postId);
+  const data = await fetch(
+    `${process.env.NEXT_PUBLIC_SITE_URL}/api/blog/${params.postId}`
+  );
+  const { post } = await data.json();
   return (
     <div className="w-[90vw] mx-auto font-sans text-white pb-6">
       <div className="w-3/5">
