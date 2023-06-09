@@ -1,3 +1,4 @@
+"use server";
 export async function getPostBySlug(postId: string) {
   const data = await fetch(`http://localhost:3000/api/blog/${postId}`);
 
