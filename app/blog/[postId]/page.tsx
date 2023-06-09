@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { IComment, IPost } from "../components/RecentPosts";
 export const dynamicParams = false;
-export async function getBlogData() {
+
+async function getBlogData() {
   const req = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/blog`);
   const data = req.json();
   return data;
@@ -12,7 +13,7 @@ export async function generateStaticParams() {
   return posts.posts.map((post: IPost) => ({ postId: post.postId }));
 }
 
-export async function getPostBySlug(postId: string) {
+async function getPostBySlug(postId: string) {
   const data = await fetch(
     `${process.env.NEXT_PUBLIC_SITE_URL}/api/blog/${postId}`
   );
