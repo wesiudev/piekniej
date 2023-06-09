@@ -1,15 +1,16 @@
 import Image from "next/image";
 import { IComment, IPost } from "../components/RecentPosts";
-import { getBlogData } from "@/app/lib/getBlogData";
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const posts = await getBlogData();
+  const posts = await fetch(
+    `${process.env.NEXT_PUBLIC_SITE_URL}/api/blog/`
+  ).then((res) => res.json());
+
   return posts.posts.map((post: IPost) => ({ postId: post.postId }));
 }
 
 export default async function Page({ params }: { params: { postId: string } }) {
-  "use server";
   const data = await fetch(
     `${process.env.NEXT_PUBLIC_SITE_URL}/api/blog/${params.postId}`
   );
