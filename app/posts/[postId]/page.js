@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+export const dynamicParams = false;
 export async function generateStaticParams() {
   const posts = await fetch(
     `https://grand-pothos-cf1bca.netlify.app/api/blog/`
@@ -15,7 +15,7 @@ async function getPost(params) {
 
   return post;
 }
-export default async function Page(params) {
+export default async function Page({ params }) {
   const post = await getPost(params.postId);
   return (
     <>
