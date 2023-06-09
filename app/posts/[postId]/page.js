@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Container } from "../../components/container";
 export const dynamicParams = false;
 export async function generateStaticParams() {
   const posts = await fetch(
@@ -18,7 +19,7 @@ async function getPost(params) {
 export default async function Page({ params }) {
   const post = await getPost(params.postId);
   return (
-    <>
+    <Container>
       <div className="w-[90vw] mx-auto font-sans text-white pb-6">
         <div className="w-3/5">
           <div className="py-3 mb-6">
@@ -63,6 +64,6 @@ export default async function Page({ params }) {
           ))}
         </div>
       </div>
-    </>
+    </Container>
   );
 }
