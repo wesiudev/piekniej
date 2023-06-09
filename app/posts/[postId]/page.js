@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Container } from "../../../components/container";
 export const dynamicParams = false;
 export async function generateStaticParams() {
   const posts = await fetch(
