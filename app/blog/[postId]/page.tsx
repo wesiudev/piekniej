@@ -7,7 +7,7 @@ export async function generateStaticParams() {
   return posts.posts.map((post: IPost) => ({ postId: post.postId }));
 }
 
-export async function getPostBySlug(postId: string) {
+async function getPostBySlug(postId: string) {
   const data = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/blog/${postId}`);
 
   if (!data.ok) {
@@ -27,16 +27,25 @@ export default async function Page({ params }: { params: { postId: string } }) {
             {post.title}
           </h1>
         </div>
-        <Image
-          className="w-full rounded-md"
-          src={post.imageUrl}
-          width={1024}
-          height={1024}
-          alt=""
-        />
+        <div className="columns-2 gap-3">
+          <Image
+            className="w-full rounded-md"
+            src={post.imageUrl}
+            width={1024}
+            height={1024}
+            alt=""
+          />
+          {post.content[0]}
+        </div>
+
         <div className="flex flex-col mt-6 ">
           {post.content.map((row: string, idx: number) => (
-            <h2 key={idx} className="text-lg mt-6 bg-rose-500 p-3 rounded-lg">
+            <h2
+              key={idx}
+              className={`${
+                idx == 0 ? "hidden" : "block"
+              }text-lg mt-6 bg-rose-500 p-3 rounded-lg`}
+            >
               {row}
             </h2>
           ))}
