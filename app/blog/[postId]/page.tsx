@@ -4,6 +4,7 @@ import { getBlogData } from "@/app/lib/getBlogData";
 import { getBlogPost } from "@/app/lib/getBlogPost";
 
 export async function generateStaticParams() {
+  "use server";
   const posts = await getBlogData();
   return posts.posts.map((post: IPost) => ({ postId: post.postId }));
 }
