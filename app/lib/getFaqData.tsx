@@ -1,7 +1,5 @@
 export async function getFaqData() {
-  const req = await fetch(
-    `https://www.grand-pothos-cf1bca.netlify.app/api/faq`
-  );
+  const req = await fetch("https://grand-pothos-cf1bca.netlify.app/api/faq");
   // Recommendation: handle errors
   if (!req.ok) {
     // This will activate the closest `error.js` Error Boundary
