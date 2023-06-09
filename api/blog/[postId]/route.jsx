@@ -1,8 +1,8 @@
-import { getBlogPosts } from "@/firebase";
+import getBlogData from "@/app/lib/getBlogData";
 import { NextResponse } from "next/server";
 export async function GET(req, { params }) {
   try {
-    const posts = await getBlogPosts();
+    const posts = await getBlogData();
     const post = posts.posts.find((post) => post.postId === params.postId);
     console.log(post);
     if (!post) {
