@@ -15,7 +15,7 @@ async function getPost(params) {
 
   return post;
 }
-export default async function Page({ params }) {
+export default async function Page(params) {
   const post = await getPost(params.postId);
   return (
     <>
