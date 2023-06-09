@@ -5,5 +5,5 @@ export async function GET(req: any) {
   const posts = await getBlogPosts();
   const post = posts.posts.find((post:IPost) => post.postId === req.postId);
 
-  return NextResponse.json(post[0]);
+  return NextResponse.json(post);
 }
