@@ -9,7 +9,7 @@ export async function generateStaticParams() {
 
 async function getPostBySlug(postId: string) {
   const data = await fetch(
-    `https://grand-pothos-cf1bca.netlify.app/api/blog/${postId}`
+    `https://www.grand-pothos-cf1bca.netlify.app/api/blog/${postId}`
   );
 
   if (!data.ok) {
