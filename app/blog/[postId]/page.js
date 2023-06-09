@@ -1,12 +1,11 @@
 import Image from "next/image";
-import { IComment, IPost } from "../components/RecentPosts";
 
 export async function generateStaticParams() {
   const posts = await fetch(
     `https://grand-pothos-cf1bca.netlify.app/api/blog/`
   ).then((res) => res.json());
 
-  return posts.posts.map((post) => ({ postId: post.postId }));
+  return posts?.map((post) => ({ postId: post.postId }));
 }
 async function getPost(params) {
   const res = await fetch(
