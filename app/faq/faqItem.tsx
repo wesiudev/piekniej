@@ -17,7 +17,7 @@ export const FaqItem = ({ question, answer, link }: IFaqItem) => {
   return (
     <button
       onClick={toggleFaq}
-      className="w-[90vw] mx-auto text-xl text-white font-sans"
+      className="w-[90vw] mx-auto text-xl text-white font-sans py-2"
     >
       <div className="bg-rose-400 p-3 rounded-md cursor-pointer text-left">
         <div className="flex flex-row items-center ">
@@ -25,7 +25,7 @@ export const FaqItem = ({ question, answer, link }: IFaqItem) => {
         </div>
         <div className={`mt-3 ${isOpen ? "block" : "hidden"}`}>
           {" "}
-          Odpowiedź: {`${answer}`}
+          Odpowiedź: <span className="italic">{`${answer}`}</span>
         </div>
       </div>
     </button>

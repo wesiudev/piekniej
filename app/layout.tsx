@@ -3,6 +3,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import { Metadata } from "next";
 import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 export const metadata: Metadata = {
   title:
     "Piękniej - Pasja Manicure. Zarezerwuj manicure online Anna Żebrowska Grudziądz",
@@ -15,9 +16,6 @@ export const metadata: Metadata = {
     icon: "/favicon.png",
   },
 };
-
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
 export default function RootLayout({
   children,
 }: {
@@ -32,6 +30,7 @@ export default function RootLayout({
         {" "}
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
