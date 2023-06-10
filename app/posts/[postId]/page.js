@@ -12,7 +12,7 @@ export const dynamicParams = true;
 
 async function getPost(params) {
   const res = await fetch(
-    `https://grand-pothos-cf1bca.netlify.app/api/blog/${params.postId}`
+    `https://grand-pothos-cf1bca.netlify.app/api/blog/posts/${params.postId}`
   );
   const post = await res.json();
 
