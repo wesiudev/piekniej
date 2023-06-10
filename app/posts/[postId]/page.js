@@ -7,6 +7,9 @@ export async function generateStaticParams() {
 
   return posts.posts.map((post) => post.postId);
 }
+
+export const dynamicParams = true;
+
 async function getPost(params) {
   const res = await fetch(
     `https://grand-pothos-cf1bca.netlify.app/api/blog/${params.postId}`
