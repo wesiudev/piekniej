@@ -1,5 +1,5 @@
 "use server";
-export async function getPost(postId) {
+export async function getPost(postId: string) {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_SITE_URL}/api/blog/${postId}`
   );

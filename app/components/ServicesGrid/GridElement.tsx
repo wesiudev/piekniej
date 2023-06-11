@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { IGridElement } from "./";
+import { IService } from "./";
 
-export const GridElement = ({
+export default function GridElement({
   serviceName,
   serviceDesc,
   serviceImage,
-}: IGridElement) => {
+}: IService) {
   return (
     <div className="bg-white rounded-lg flex flex-col justify-center items-center w-full pb-3 mb-3">
       <div className="font-sans pb-3 pt-5 mx-auto w-max text-2xl">
@@ -27,4 +27,4 @@ export const GridElement = ({
       </div>
     </div>
   );
-};
+}
