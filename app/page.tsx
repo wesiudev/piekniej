@@ -1,6 +1,7 @@
 import { GalleryGrid } from "./components/GalleryGrid";
 import { Announcer } from "./components/Announcer";
 import { Reserve } from "./components/Reserve";
+import Link from "next/link";
 // import { ServicesGrid } from "./components/ServicesGrid";
 // import { getServicesList } from "./lib/getServicesList";
 
