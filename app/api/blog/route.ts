@@ -6,6 +6,6 @@ export async function GET() {
     const posts = await getBlogPosts();
     return NextResponse.json(posts)
 } catch (error) {
-    return new NextResponse("Internal Server Errorrrrrrrrrrrrrr", { status: 500 });
+    return new NextResponse("Internal Server Error", { status: 500 });
   }
 }

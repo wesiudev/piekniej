@@ -7,7 +7,6 @@ export async function GET(req, { params }) {
     if (!post) {
       return new NextResponse("not found", { status: 404 });
     }
-
     return NextResponse.json({
       post,
     });

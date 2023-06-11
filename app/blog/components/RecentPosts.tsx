@@ -31,7 +31,7 @@ export const RecentPosts = ({ posts }: { posts: IPost[] }) => {
             key={idx}
             className="bg-rose-500 p-3 rounded-md h-max group cursor-pointer"
           >
-            <Link href={`/posts/post/${polishToEnglish(post.postId)}`}>
+            <Link href={`/blog/post/${polishToEnglish(post.postId)}`}>
               <div className="relative overflow-hidden">
                 <div className="absolute right-3 bottom-3 font-pars text-3xl text-white text-opacity-40 z-50">
                   Piękniej

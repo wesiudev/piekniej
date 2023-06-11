@@ -1,25 +1,18 @@
+import { getPost } from "@/app/lib/getPost";
 import Image from "next/image";
 
 export async function generateStaticParams() {
-  const posts = await fetch(
-    `https://grand-pothos-cf1bca.netlify.app/api/blog/`
-  ).then((res) => res.json());
+  const posts = await fetch(`http://localhost:3000/api/blog/`).then((res) =>
+    res.json()
+  );
 
   return posts.posts.map((post) => post.postId);
 }
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
-async function getPost(params) {
-  const res = await fetch(
-    `https://grand-pothos-cf1bca.netlify.app/api/blog/posts/${params.postId}`
-  );
-  const post = await res.json();
-
-  return post;
-}
 export default async function Page({ params }) {
-  const post = await getPost(params.postId);
+  const { post } = await getPost(params.postId);
   return (
     <div className="w-[90vw] mx-auto font-sans text-white pb-6">
       <div className="w-3/5">
