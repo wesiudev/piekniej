@@ -2,9 +2,9 @@ import { getPost } from "@/app/lib/getPost";
 import Image from "next/image";
 
 export async function generateStaticParams() {
-  const posts = await fetch(`http://localhost:3000/api/blog/`).then((res) =>
-    res.json()
-  );
+  const posts = await fetch(
+    `${process.env.NEXT_PUBLIC_SITE_URL}/api/blog/`
+  ).then((res) => res.json());
 
   return posts.posts.map((post) => post.postId);
 }
