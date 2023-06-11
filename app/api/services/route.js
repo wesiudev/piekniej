@@ -1,14 +1,13 @@
 import { NextResponse } from "next/server";
-import { faq } from "@/public/faq.json";
-
+import { services } from "@/public/services.json";
 export async function GET() {
   try {
-    if (!faq) {
+    if (!services) {
       return new NextResponse("not found", { status: 404 });
     }
-    if (faq) {
+    if (services) {
       return NextResponse.json({
-        faq,
+        services,
       });
     }
   } catch (error) {
