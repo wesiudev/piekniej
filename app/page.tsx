@@ -5,7 +5,7 @@ import { ServicesGrid } from "./components/ServicesGrid";
 import { getServicesList } from "./lib/getServicesList";
 
 export default async function Home() {
-  const services = await getServicesList();
+  const { services } = await getServicesList();
   return (
     <>
       <GalleryGrid />
