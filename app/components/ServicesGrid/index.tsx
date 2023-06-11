@@ -1,3 +1,4 @@
+import { getServicesList } from "@/app/lib/getServicesList";
 import { SquareOfBalls } from "../accents/SquareOfBalls";
 import { GridElement } from "./GridElement";
 export interface IGridElement {
@@ -6,7 +7,13 @@ export interface IGridElement {
   serviceImage: string;
 }
 
-export const ServicesGrid = ({ services }: { services: IGridElement[] }) => {
+async function getServices() {
+  const { services } = await getServicesList();
+  return services;
+}
+
+export const ServicesGrid = () => {
+  const services = getServices();
   return (
     <div className="w-full h-max flex flex-col justify-center items-center pt-24 bg-rose-300 relative">
       <span className="font-pars text-5xl text-white pb-6 text-center">
