@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html lang="pl">
       <body
         className={`${cocosharp.variable} ${parisienne.variable}
        w-full `}
