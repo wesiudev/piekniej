@@ -1,17 +1,30 @@
+import { Footer } from "@/app/components/Footer";
+import { Header } from "./components/Header";
 import { GalleryGrid } from "./components/GalleryGrid";
 import { Announcer } from "./components/Announcer";
 import { Reserve } from "./components/Reserve";
-import Link from "next/link";
-// import { ServicesGrid } from "./components/ServicesGrid";
-// import { getServicesList } from "./lib/getServicesList";
-
+import { ServicesGrid } from "./components/ServicesGrid";
+async function getData() {
+  const req = await fetch(
+    "https://main--grand-pothos-cf1bca.netlify.app/api/data"
+  );
+  // Recommendation: handle errors
+  if (!req.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
+  const services = req.json();
+  return services;
+}
 export default async function Home() {
-  // const { services } = await getServicesList();
+  const { services } = await getData();
   return (
     <>
+      {" "}
+      {/* <Header /> */}
       <GalleryGrid />
       <Announcer />
-      {/* <ServicesGrid services={services} /> */}
+      <ServicesGrid services={services} />
       <Reserve />
     </>
   );

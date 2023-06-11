@@ -70,7 +70,7 @@ export const GalleryGrid = () => {
       </div>
       <div className="w-full flex justify-center pt-12 sm:pt-6">
         <Link
-          href="https://www.instagram.com"
+          href="/"
           className="w-max p-3 bg-rose-500 font-sans text-xl text-white flex flex-row items-center group border-2 border-transparent hover:border-white rounded-lg"
         >
           Zobacz więcej
