@@ -10,7 +10,7 @@ export async function generateStaticParams() {
   return posts.map((post) => ({ postId: post.postId }));
 }
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 export default async function Page({ params }) {
   const { post } = await getPost(params.postId);
