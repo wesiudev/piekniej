@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { faq } from "@/public/faq.json";
+import faq from "@/public/faq.json";
 
 export async function GET() {
   try {
