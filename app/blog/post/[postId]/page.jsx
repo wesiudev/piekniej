@@ -1,7 +1,6 @@
 import { getPost } from "@/app/lib/getPost";
 import Image from "next/image";
 import Link from "next/link";
-
 export async function generateStaticParams() {
   const { posts } = await fetch(
     `${process.env.NEXT_PUBLIC_SITE_URL}/api/blog/`
