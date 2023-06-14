@@ -27,7 +27,7 @@ export const RecentPosts = ({ posts }: { posts: IPost[] }) => {
       <h1 className="py-3 font-sans italic font-light text-white">
         /{" "}
         <Link
-          href={`${process.env.NEXT_PUBLIC_SITE_URL}/blog/`}
+          href="/blog/"
           className="hover:underline hover:underline-offset-2"
         >
           blog

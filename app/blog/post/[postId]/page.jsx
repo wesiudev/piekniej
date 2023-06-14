@@ -20,14 +20,14 @@ export default async function Page({ params }) {
           <h1 className="font-sans italic font-light py-3">
             /{" "}
             <Link
-              href={`${process.env.NEXT_PUBLIC_SITE_URL}/blog/`}
+              href="/blog/"
               className="hover:underline hover:underline-offset-2"
             >
               blog
             </Link>{" "}
             /{" "}
             <Link
-              href={`${process.env.NEXT_PUBLIC_SITE_URL}/blog/post/${post.postId}`}
+              href={`/blog/post/${post.postId}`}
               className="hover:underline hover:underline-offset-2"
             >
               {" "}
