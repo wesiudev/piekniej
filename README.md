@@ -28,10 +28,15 @@ To run **ManicureGrudziadz** locally, follow the steps below:
 - Paste the configuration details into the .env.local file in the following format:
 
 NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
+
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-auth-domain
+
 NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
+
 NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+
 NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+
 NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id
 
 **5**. Start the development server:
