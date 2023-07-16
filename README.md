@@ -1,6 +1,6 @@
 # ManicureGrudziadz
 
-### **ManicureGrudziadz** is a web application that serves as a portfolio for showcasing manicure services and allows users to make online reservations. This project is built using **Next.js, TypeScript, and Firebase**. With **ManicureGrudziadz**, users can browse through the portfolio of the manicurist, and easily book an appointment online.
+### **ManicureGrudziadz** is a web application that serves as a portfolio for showcasing manicure services and allows users to make online reservations. This project is built using **Next.js, TypeScript, Server Side Rendering, and Firebase**. With **ManicureGrudziadz**, users can browse through the portfolio of the manicurist. 
 
 #Installation
 
