@@ -26,7 +26,7 @@ export async function generateMetadata({ params }) {
     title: `${post.title} | Blog Piękniej - Pasja Manicure | Paznokcie Grudziądz | Anna Żebrowska Manicure Grudziądz`,
   };
 }
-
+export const dynamic = false;
 export default async function Page({ params }) {
   const { post } = await getPost(params.postId);
   const { posts } = await getBlogData();
