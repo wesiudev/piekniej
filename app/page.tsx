@@ -25,7 +25,7 @@ export default async function Home() {
   const { posts } = await getBlogData();
   return (
     <>
-      <GalleryGrid />
+      {/* <GalleryGrid /> */}
       <Announcer />
       <ServicesGrid services={services} />
       <Reserve />

@@ -181,7 +181,7 @@ export const GalleryGrid = () => {
               Zobacz inspiracje
             </h1>
 
-            <VideoGallery videos={videoImagesWithDescriptions} />
+            {/* <VideoGallery videos={videoImagesWithDescriptions} /> */}
           </div>
           <div className="flex flex-col-reverse md:flex-col">
             <div className="md:ml-6 w-full h-max font-sans mt-6 md:mt-0 flex flex-col">
