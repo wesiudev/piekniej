@@ -114,7 +114,7 @@ export default function FinalForm() {
           <h2 className="text-6xl text-center md:text-left rounded-lg mb-6 md:mb-12 mt:12 md:mt-0 leading-relaxed ">
             Informacje
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2  gap-x-6 gap-y-10 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2  space-x-6 space-y-10 w-full">
             <div className="relative h-max w-full">
               <input
                 className={`p-3 outline-none focus:shadow-md focus:shadow-rose-500 w-full z-5 text-black`}

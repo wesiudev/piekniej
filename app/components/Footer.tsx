@@ -13,31 +13,31 @@ export const Footer = () => {
           alt=""
           className="mx-auto lg:mx-0"
         />
-        <div className="text-gray-50 flex flex-col mx-auto lg:mx-0 mt-8 lg:mt-0 w-3/4 sm:w-full justify-center font-sans font-regular">
+        <div className="text-white flex flex-col mx-auto lg:mx-0 mt-8 lg:mt-0 w-3/4 sm:w-full justify-center font-sans font-regular">
           <div className="text-2xl relative">
-            <div className="absolute -left-10 -top-5 rotate-12 text-green-100">
+            <div className="absolute -left-10 -top-5 rotate-12 text-white">
               <FaArrowRight />
             </div>{" "}
             Znajdziesz mnie tutaj:
           </div>
-          <div className="mt-2 text-xl font-light italic grid grid-rows-3 gap-y-2">
+          <div className="mt-2 text-xl font-light italic grid grid-rows-3 gap-y-2 text-white">
             <div className="flex flex-row items-center ">
-              <FaInstagram className="mr-1" />
+              <FaInstagram className="mr-1 text-white" />
               <span>Instagram </span>
             </div>
             <div className="flex flex-row items-center">
-              <FaFacebook className="mr-1" />
+              <FaFacebook className="mr-1 text-white" />
               <span> Facebook </span>
             </div>
             <div className="flex flex-row items-center">
-              <FaBlog className="mr-1" />
+              <FaBlog className="mr-1 text-white" />
               <span> Blog </span>
             </div>
           </div>
         </div>
         <div className="text-gray-50 flex flex-col justify-center font-sans font-regular mx-auto lg:mx-0 mt-8 lg:mt-0 w-3/4 sm:w-full pb-12">
           <div className="text-2xl relative">
-            <div className="absolute -left-10 -top-5 rotate-12 text-green-100"></div>{" "}
+            <div className="absolute -left-10 -top-5 rotate-12 text-white"></div>{" "}
             Chcesz o coś zapytać?
             <div className="mt-2 flex flex-col justify-between">
               <input

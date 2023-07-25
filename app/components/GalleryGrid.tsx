@@ -140,7 +140,7 @@ export const GalleryGrid = () => {
             <div className="w-full flex flex-col h-max relative rounded-xl overflow-hidden">
               <div className="absolute right-0 w-4 h-full backdrop-blur-sm blur-sm z-50" />
               <div className="absolute left-0 w-4 h-full backdrop-blur-sm blur-sm z-50" />
-              <div className="relative w-auto flex flex-row items-center justify-center gap-3 animate-translate-x-100 sm:animate-translate-x-100-sm">
+              <div className="relative w-auto flex flex-row items-center justify-center space-x-3 animate-translate-x-100 sm:animate-translate-x-100-sm">
                 {topImagesWithDescriptions.map((img, idx) => (
                   <Image
                     key={idx}
@@ -152,7 +152,7 @@ export const GalleryGrid = () => {
                   />
                 ))}
               </div>
-              <div className="w-auto flex flex-row items-center justify-center gap-3 pt-6 animate-minus-translate-x-100 sm:animate-minus-translate-x-100-sm">
+              <div className="w-auto flex flex-row items-center justify-center space-x-3 pt-6 animate-minus-translate-x-100 sm:animate-minus-translate-x-100-sm">
                 {middleImagesWithDescriptions.map((img, idx) => (
                   <Image
                     key={idx}
@@ -164,7 +164,7 @@ export const GalleryGrid = () => {
                   />
                 ))}
               </div>
-              <div className="w-auto flex flex-row items-center justify-center gap-3 pt-6 animate-translate-x-100 sm:animate-translate-x-100-sm">
+              <div className="w-auto flex flex-row items-center justify-center space-x-3 pt-6 animate-translate-x-100 sm:animate-translate-x-100-sm">
                 {bottomImagesWithDescriptions.map((img, idx) => (
                   <Image
                     key={idx}
@@ -185,16 +185,16 @@ export const GalleryGrid = () => {
           </div>
           <div className="flex flex-col-reverse md:flex-col">
             <div className="md:ml-6 w-full h-max font-sans mt-6 md:mt-0 flex flex-col">
-              <h1 className="text-3xl text-center font-sans text-gray-50 sm:py-3 drop-shadow-lg shadow-black py-3 mb-6 bg-rose-500 rounded-lg">
+              <h1 className="text-3xl text-center font-sans text-white sm:py-3 drop-shadow-lg shadow-black py-3 mb-6 bg-rose-500 rounded-lg">
                 Manicure Media
               </h1>
-              <div className="flex flex-col">
+              <div className="flex flex-col text-white">
                 <Link
                   href="/"
                   className="flex flex-row items-center text-2xl w-full hover:bg-rose-300 rounded-md p-1 relative"
                 >
                   <div className="absolute right-3  top-[50%] -translate-y-[50%]">
-                    <FaLink />
+                    <FaLink className="text-white"/>
                   </div>
                   <FaFacebook className="h-12 w-12 text-blue-400 mr-3" />
                   Facebook
@@ -204,7 +204,7 @@ export const GalleryGrid = () => {
                   className="flex flex-row items-center text-2xl mt-3 w-full hover:bg-rose-300 rounded-md p-1 relative"
                 >
                   <div className="absolute right-3  top-[50%] -translate-y-[50%]">
-                    <FaLink />
+                    <FaLink className="text-white"/>
                   </div>
                   <FaInstagram className="h-12 w-12 mr-3 bg-gradient-to-b from-rose-400 via-purple-400 to-rose-400 bg-opacity-75 rounded-full p-2" />
                   Instagram
@@ -214,7 +214,7 @@ export const GalleryGrid = () => {
                   className="flex flex-row items-center text-2xl mt-3 w-full hover:bg-rose-300 rounded-md p-1 relative"
                 >
                   <div className="absolute right-3 top-[50%] -translate-y-[50%]">
-                    <FaLink />
+                    <FaLink className="text-white"/>
                   </div>
                   <FaPinterestP className="h-12 w-12 text-white mr-3 bg-red-500 rounded-full p-2" />
                   Pinterest

@@ -45,7 +45,7 @@ export const FeaturedPosts = ({ posts }: { posts: IPost[] }) => {
               </div>
               <div className="flex flex-row w-full justify-between text-white font-sans py-2">
                 <span>{moment(post.creationTime).format("DD.MM.YYYY")}</span>
-                <span className="flex flex-row items-center gap-1">
+                <span className="flex flex-row items-center space-x-1 space-y-1">
                   <FaBook />
                   {post.readingTime} min.
                 </span>

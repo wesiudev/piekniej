@@ -8,10 +8,10 @@ import { FaBook } from "react-icons/fa";
 export default function BlogInviter({ posts }: { posts: IPost[] }) {
   return (
     <div className="w-full flex flex-col   bg-rose-300 pb-6">
-      <h1 className="text-3xl text-left w-[90vw]  p-3 pl-0 font-sans mb-3 rounded-lg mx-auto font-bold">
-        Czytaj o manicure:
+      <h1 className="text-3xl text-left w-[90vw]  p-3 pl-0 font-sans mb-3 rounded-lg mx-auto font-bold text-white">
+        Zajrzyj na bloga
       </h1>
-      <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-5 gap-3 w-[90vw] mx-auto">
+      <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-5 space-x-3 space-y-3 w-[90vw] mx-auto">
         {posts?.map((post: IPost, idx: number) => (
           <div
             key={idx}
@@ -33,7 +33,7 @@ export default function BlogInviter({ posts }: { posts: IPost[] }) {
               </div>
               <div className="flex flex-row w-full justify-between text-white font-sans py-2">
                 <span>{moment(post.creationTime).format("DD.MM.YYYY")}</span>
-                <span className="flex flex-row items-center gap-1">
+                <span className="flex flex-row items-center space-x-1 space-y-1">
                   <FaBook />
                   {post.readingTime} min.
                 </span>

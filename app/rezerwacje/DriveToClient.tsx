@@ -8,7 +8,7 @@ export default function DriveToClient({
   return (
     <div className="flex flex-col ">
       <h1 className="text-3xl my-3">Dojazd:</h1>
-      <div className="flex flex-row gap-3">
+      <div className="flex flex-row space-x-3">
         <button
           onClick={() => setDriveToClient("tak")}
           className={`bg-rose-400 p-3 px-6 rounded-lg font-bold border-2 hover:border-white ${

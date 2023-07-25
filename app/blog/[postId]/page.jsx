@@ -27,8 +27,6 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export const dynamicParams = false;
-
 export default async function Page({ params }) {
   const { post } = await getPost(params.postId);
   const { posts } = await getBlogData();

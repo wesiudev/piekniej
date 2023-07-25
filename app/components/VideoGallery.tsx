@@ -110,7 +110,7 @@ export default function VideoGallery({ videos }: { videos: IVideo[] }) {
           </div>
         </div>
       )}
-      <div className="justify-center lg:justify-start flex flex-row gap-3">
+      <div className="justify-center lg:justify-start flex flex-row space-x-3">
         {videos.map((img, idx) => (
           <div key={idx} className="w-[124px] h-auto relative group">
             <Image

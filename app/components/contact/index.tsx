@@ -23,7 +23,7 @@ export const Contact = ({
   const transitionState = getTransitionState(isContactOpen);
   return (
     <div
-      className={`z-[1500] sm:shadow-sm  font-sans min-h-[90vh] sm:min-h-[60vh] pt-6 sm:shadow-black w-full sm:w-2/3 lg:w-1/2  bg-gradient-to-br from-rose-400 to-red-400 sm:rounded-l-md fixed top-0 sm:top-[50%] right-0 z-50 sm:-translate-y-[50%] ease-in-out duration-[250ms] flex items-center justify-center lg:pt-6 
+      className={`z-[1500] sm:shadow-sm  font-sans min-h-[90vh] sm:min-h-[60vh] pt-6 sm:shadow-black w-full sm:w-2/3 lg:w-1/2  bg-gradient-to-br from-rose-400 to-red-400 sm:rounded-l-md fixed top-0 sm:top-[50%] right-0 sm:-translate-y-[50%] ease-in-out duration-[250ms] flex items-center justify-center lg:pt-6 
         ${transitionState}}
         `}
     >
@@ -40,7 +40,7 @@ export const Contact = ({
             <div className="h-1 w-2/3 sm:w-12  rounded-full mx-auto mt-4 mb-2 bg-rose-600"></div>
           </div>
         </div>
-        <div className="w-full p-6 flex flex-row gap-x-3">
+        <div className="w-full p-6 flex flex-row space-x-3">
           <button
             onClick={() => setCurrentTab("info")}
             className={`rounded-md w-full ${
