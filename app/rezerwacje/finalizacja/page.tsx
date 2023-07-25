@@ -114,7 +114,7 @@ export default function FinalForm() {
           <h2 className="text-5xl sm:text-6xl text-center md:text-left rounded-lg mb-6 md:mb-12 mt:12 md:mt-0 leading-relaxed text-white">
             Informacje
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2  sm:space-x-6 space-y-10 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2  gap-x-3 w-full mt-6 md:mt-0">
             <div className="relative h-max w-full">
               <input
                 className={`p-3 outline-none focus:shadow-md focus:shadow-rose-500 w-full z-5 text-black`}
@@ -186,7 +186,7 @@ export default function FinalForm() {
             {/* Third row (similarly implement other inputs) */}
 
             {/* Input for "Nazwisko" */}
-            <div className="relative h-max w-full">
+            <div className="relative h-max w-full mt-10">
               <input
                 className={`p-3 outline-none focus:shadow-md focus:shadow-rose-500 w-full z-5 text-black`}
                 type="text"
@@ -224,7 +224,7 @@ export default function FinalForm() {
             {/* Fourth row */}
 
             {/* Input for "Ulica" */}
-            <div className="relative h-max w-full">
+            <div className="relative h-max w-full mt-10">
               <input
                 className={`p-3 outline-none focus:shadow-md focus:shadow-rose-500 w-full z-5 text-black`}
                 type="text"
@@ -263,7 +263,7 @@ export default function FinalForm() {
             {/* Fifth row */}
 
             {/* Input for "Miasto" */}
-            <div className="relative h-max w-full">
+            <div className="relative h-max w-full mt-10">
               <input
                 className={`p-3 outline-none focus:shadow-md focus:shadow-rose-500 w-full z-5 text-black`}
                 type="text"
@@ -302,7 +302,7 @@ export default function FinalForm() {
             {/* Sixth row */}
 
             {/* Input for "Numer telefonu" */}
-            <div className="relative h-max w-full">
+            <div className="relative h-max w-full mt-10">
               <input
                 className={`p-3 outline-none focus:shadow-md focus:shadow-rose-500 w-full z-5 text-black`}
                 type="text"
