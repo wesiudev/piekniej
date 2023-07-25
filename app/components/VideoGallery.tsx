@@ -110,7 +110,7 @@ export default function VideoGallery({ videos }: { videos: IVideo[] }) {
           </div>
         </div>
       )}
-      <div className="flex flex-row gap-3">
+      <div className="justify-center lg:justify-start flex flex-row gap-3">
         {videos.map((img, idx) => (
           <div key={idx} className="w-[124px] h-auto relative group">
             <Image
@@ -121,7 +121,7 @@ export default function VideoGallery({ videos }: { videos: IVideo[] }) {
               alt={img.desc}
               className="h-auto w-full rounded-lg block group-hover:hidden group-hover:bg-white"
             />
-
+            <p className="absolute right-1 bottom-1 font-sans">{img.length}</p>
             <video
               onClick={() => setCurrentVideo(idx + 1)}
               width={124}

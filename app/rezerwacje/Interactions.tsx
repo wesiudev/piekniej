@@ -11,8 +11,8 @@ import DriveToClient from "./DriveToClient";
 export default function Interactions({ services }: { services: IService[] }) {
   const [chosenService, setChosenService] = useState({
     name: "",
-    time: { month: "", day: "" },
-    drive: false,
+    time: { month: "", day: "", hour: "" },
+    drive: "",
   });
 
   // isVisible
@@ -22,37 +22,45 @@ export default function Interactions({ services }: { services: IService[] }) {
   function setDate(day: any, month: any) {
     setChosenService({
       ...chosenService,
-      time: { month: month, day: day },
+      time: {
+        month: month,
+        day: day,
+        hour: chosenService.time.hour !== "" ? chosenService.time.hour : "",
+      },
     });
   }
-  function setDriveToClient(arg: boolean) {
+  function setDriveToClient(arg: string) {
     setChosenService({
       ...chosenService,
       drive: arg,
+    });
+  }
+  function setHour(arg: string) {
+    setChosenService({
+      ...chosenService,
+      time: {
+        month: chosenService.time.month,
+        day: chosenService.time.day,
+        hour: arg,
+      },
     });
   }
 
   //finalize order
 
   const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   function finalizeOrder() {
-    // now you got a read/write object
-    const current = new URLSearchParams(Array.from(searchParams.entries())); // -> has to use this form
-
-    const query = `${(
-      chosenService.drive +
-      chosenService.name +
-      chosenService.time.day +
-      chosenService.time.month
-    ).toString()}`;
-
     router.push(
       `/rezerwacje/finalizacja?drive=${chosenService.drive}&name=${
         chosenService.name
-      }&date=${chosenService.time.day + " " + chosenService.time.month}`
+      }&date=${
+        chosenService.time.month +
+        " " +
+        chosenService.time.day +
+        " " +
+        chosenService.time.hour
+      }`
     );
   }
 
@@ -66,12 +74,12 @@ export default function Interactions({ services }: { services: IService[] }) {
       )}
       {chosenService.name && (
         <h1
-          style={{ backdropFilter: " blur(10px)" }}
-          className={`bg-rose-500 p-3 text-white font-bold bg-opacity-50  text-2xl mt-0 top-0 rounded-b-md fixed w-[90vw] left-[50%] -translate-x-[50%]  z-[1202]   ${
+          style={{ backdropFilter: "blur(10px)" }}
+          className={`bg-rose-500 p-3 text-white font-bold bg-opacity-50  text-2xl mt-0 top-[0%] rounded-b-md fixed w-[90vw] left-[50%] -translate-x-[50%]  z-[1202]   ${
             !isVisible
-              ? " fixed translate-y-0 duration-500"
-              : "fixed translate-y-[-30vh] duration-500"
-          }`}
+              ? " fixed -translate-y-[0%] duration-500"
+              : "fixed -translate-y-[100%] duration-500"
+          } `}
         >
           <div className={` text-white font-bold rounded-xl flex flex-col`}>
             <div>Usługa: {chosenService.name}</div>
@@ -104,7 +112,7 @@ export default function Interactions({ services }: { services: IService[] }) {
               className="rounded-t-md w-full"
             />
             <div className="flex justify-between flex-col">
-              <div className="font-sans pb-3 pt-5 mx-auto w-max text-sm sm:text-2xl text-white ">
+              <div className="font-sans pb-3 pt-5 mx-auto w-max text-sm sm:text-xl text-white ">
                 <span>{service.serviceName}</span>
               </div>
             </div>
@@ -121,7 +129,11 @@ export default function Interactions({ services }: { services: IService[] }) {
           >
             <div>
               Wybrany termin:{" "}
-              {chosenService.time.month + " " + chosenService.time.day}
+              {chosenService.time.month +
+                " " +
+                chosenService.time.day +
+                " " +
+                chosenService.time.hour}
             </div>
           </h1>
         )}
@@ -130,7 +142,12 @@ export default function Interactions({ services }: { services: IService[] }) {
           aby uniknąć nieporozumień.
         </h2>
         <div className="bg-rose-500 text-white flex flex-col flex-wrap">
-          <MonthView setChosenService={setDate} chosenService={chosenService} />
+          <MonthView
+            setChosenService={setDate}
+            chosenService={chosenService}
+            setHour={setHour}
+            hour={chosenService.time.hour}
+          />
           <DriveToClient
             setDriveToClient={setDriveToClient}
             driveToTheClient={chosenService.drive}
@@ -138,9 +155,15 @@ export default function Interactions({ services }: { services: IService[] }) {
           {chosenService.name && chosenService.time.month !== "" && (
             <button
               onClick={finalizeOrder}
-              className="bg-rose-400 p-3 px-6 text-3xl mt-3 rounded-xl border-4 border-rose-500 hover:border-white w-max mx-auto"
+              className={`bg-green-600  hover:bg-green-500 duration-300 p-3 px-6 text-3xl md:text-5xl mt-3 rounded-xl w-max mx-auto font-bold ${
+                chosenService.name &&
+                chosenService.time.day !== "" &&
+                chosenService.drive !== ""
+                  ? "fixed bottom-36 md:bottom-20 left-[50%] -translate-x-[50%] shadow-lg shadow-black z-[1205] block"
+                  : " hidden"
+              }`}
             >
-              Zarezerwuj
+              Rezerwuj online
             </button>
           )}
         </div>

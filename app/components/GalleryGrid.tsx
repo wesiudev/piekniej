@@ -82,9 +82,8 @@ export const GalleryGrid = () => {
   const videoImages = [
     { src: vid1img, length: "0:09" },
     { src: vid2img, length: "0:06" },
-    { src: vid3img, length: "0:59" },
-    { src: vid4img, length: "0:20" },
-    { src: vid5img, length: "0:19" },
+    { src: vid3img, length: "0:20" },
+    { src: vid4img, length: "0:19" },
   ];
   function generateRandomDescription() {
     const themes = [
@@ -223,9 +222,12 @@ export const GalleryGrid = () => {
               </div>
             </div>
             <div className="md:ml-6 w-full h-full font-sans mt-6 flex flex-col">
-              <h1 className="text-3xl text-center font-sans text-gray-50 sm:py-3 drop-shadow-lg shadow-black py-3 mb-6 bg-rose-500 rounded-lg hidden md:block">
+              <Link
+                href="/rezerwacje"
+                className="text-3xl text-center font-sans text-gray-50 sm:py-3 drop-shadow-lg shadow-black py-3 mb-6 bg-rose-500 rounded-lg hidden md:block"
+              >
                 Rezerwacje
-              </h1>
+              </Link>
               <div className="overflow-hidden w-full relative">
                 <Link
                   href="/rezerwacje"
@@ -251,7 +253,6 @@ import vid1img from "@/public/videos/vid1.jpg";
 import vid2img from "@/public/videos/vid2.jpg";
 import vid3img from "@/public/videos/vid3.jpg";
 import vid4img from "@/public/videos/vid4.jpg";
-import vid5img from "@/public/videos/vid5.jpg";
 
 import img1 from "@/public/images/img1.jpg";
 import img2 from "@/public/images/img2.jpg";

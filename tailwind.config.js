@@ -24,10 +24,10 @@ module.exports = {
         },
         "-translate-x-100": {
           "0%, 100%": {
-            transform: "translateX(100%)",
+            transform: "translateX(-100%)",
           },
           "50%": {
-            transform: "translateX(-100%)",
+            transform: "translateX(100%)",
           },
         },
         "translate-x-100-sm": {

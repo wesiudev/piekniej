@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { FaEnvelope, FaPhone, FaUser } from "react-icons/fa";
@@ -9,7 +10,7 @@ export default function FinalForm() {
   const drive = searchParams.get("drive");
   const name = searchParams.get("name");
   const date = searchParams.get("date");
-
+  const [isOk, setOk] = useState(false);
   //form handling
   const [focus, setFocus] = useState("");
   const [data, setData] = useState({
@@ -68,27 +69,51 @@ export default function FinalForm() {
     }
   }
   return (
-    <div className="w-[90vw] mx-auto">
-      <h1 className="bg-rose-500 text-5xl p-3 rounded-lg text-center">
-        Finalizacja rezerwacji
+    <div className="w-[90vw] mx-auto pb-12 pt-12 lg:pt-0 relative">
+      {isOk && (
+        <div className="fixed left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] w-max h-max p-6 bg-black z-[1500] flex flex-col">
+          <div className=" text-white">
+            Super! Możesz teraz wpłacić zaliczkę.
+          </div>
+          <Link className="bg-red-500 p-3 rounded-lg mx-auto" href="/">
+            Zapłać
+          </Link>
+        </div>
+      )}
+      <h1 className="bg-rose-500 text-3xl md:text-5xl p-3 rounded-lg text-center font-bold hidden lg:block">
+        Podsumowanie
       </h1>
-      <div className="grid grid-cols-1 lg:grid-cols-2  bg-rose-400 p-6 rounded-lg mt-6">
-        <div className="flex flex-col">
-          <h2 className="text-4xl md:text-6xl rounded-lg mb-4 font-bold leading-relaxed">
+      <div className="grid grid-cols-1 lg:flex  bg-rose-400 p-6 rounded-lg lg:mt-6">
+        <div className="flex flex-col items-center">
+          <h2 className="text-6xl rounded-lg mb-6 md:mb-12 mt:12 md:mt-0 leading-relaxed">
             Szczegóły
           </h2>
 
-          <div className="text-2xl leading-relaxed">Typ usługi: {name}</div>
-          <div className="text-2xl leading-relaxed">Data: {date}</div>
+          <div className="text-2xl w-full">
+            <span className="font-bold text-3xl "> Typ usługi:</span> <br />
+            <span className="underline underline-offset-2">{name}</span>
+          </div>
+          <div className="text-2xl w-full mt-3">
+            <span className="font-bold text-3xl "> Data: </span>
+            <br />
+            <span className="underline underline-offset-2">{date}</span>
+          </div>
 
-          <div className="text-2xl leading-relaxed mb-6">
-            Dojazd: {drive ? "Tak" : "Nie"}
+          <div className="text-2xl mb-6 w-full mt-3">
+            <span className="font-bold text-3xl "> Dojazd: </span>
+            <br />
+            <span className="underline underline-offset-2">
+              {drive === "Tak" ? "Tak" : "Nie"}
+            </span>
           </div>
         </div>
 
         {/* form */}
         {/* first row */}
-        <div className="flex w-full ">
+        <div className="flex flex-col w-full h-max md:ml-48">
+          <h2 className="text-6xl text-center md:text-left rounded-lg mb-6 md:mb-12 mt:12 md:mt-0 leading-relaxed ">
+            Informacje
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2  gap-x-6 gap-y-10 w-full">
             <div className="relative h-max w-full">
               <input
@@ -287,8 +312,8 @@ export default function FinalForm() {
                 value={data.pNumber}
               />
               <div
-                onClick={() => setFocus("numerTelefonu")}
-                className={`absolute top-[50%] flex flex-row items-center cursor-pointer ${
+                onClick={() => setFocus("pNumber")}
+                className={`absolute top-[50%] flex flex-row items-center cursor-pointer select-none ${
                   focus === "pNumber" || data.pNumber !== ""
                     ? "-translate-y-[150%]  rounded-md px-3 py-1 left-0 ease-in-out duration-100 bg-rose-500 text-white z-0"
                     : "-translate-y-[50%] left-3 ease-in-out duration-150 text-rose-500"
@@ -313,6 +338,12 @@ export default function FinalForm() {
               </div>
             </div>
           </div>
+          <button
+            onClick={() => setOk(true)}
+            className="bg-green-500 rounded-lg p-3 w-full md:w-2/3 lg:w-1/3  mt-12 text-xl"
+          >
+            Rezerwuję!
+          </button>
         </div>
       </div>
     </div>
