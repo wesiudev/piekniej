@@ -85,21 +85,21 @@ export default function FinalForm() {
       </h1>
       <div className="grid grid-cols-1 lg:flex  bg-rose-400 p-6 rounded-lg lg:mt-6">
         <div className="flex flex-col items-center">
-          <h2 className="text-6xl rounded-lg mb-6 md:mb-12 mt:12 md:mt-0 leading-relaxed">
+          <h2 className="text-5xl sm:text-6xl rounded-lg mb-6 md:mb-12 mt:12 md:mt-0 leading-relaxed text-white">
             Szczegóły
           </h2>
 
-          <div className="text-2xl w-full">
+          <div className="text-2xl w-full text-white">
             <span className="font-bold text-3xl "> Typ usługi:</span> <br />
             <span className="underline underline-offset-2">{name}</span>
           </div>
-          <div className="text-2xl w-full mt-3">
+          <div className="text-2xl w-full mt-3 text-white">
             <span className="font-bold text-3xl "> Data: </span>
             <br />
             <span className="underline underline-offset-2">{date}</span>
           </div>
 
-          <div className="text-2xl mb-6 w-full mt-3">
+          <div className="text-2xl mb-6 w-full mt-3 text-white">
             <span className="font-bold text-3xl "> Dojazd: </span>
             <br />
             <span className="underline underline-offset-2">
@@ -111,10 +111,10 @@ export default function FinalForm() {
         {/* form */}
         {/* first row */}
         <div className="flex flex-col w-full h-max md:ml-48">
-          <h2 className="text-6xl text-center md:text-left rounded-lg mb-6 md:mb-12 mt:12 md:mt-0 leading-relaxed ">
+          <h2 className="text-5xl sm:text-6xl text-center md:text-left rounded-lg mb-6 md:mb-12 mt:12 md:mt-0 leading-relaxed text-white">
             Informacje
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2  space-x-6 space-y-10 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2  sm:space-x-6 space-y-10 w-full">
             <div className="relative h-max w-full">
               <input
                 className={`p-3 outline-none focus:shadow-md focus:shadow-rose-500 w-full z-5 text-black`}
@@ -340,7 +340,7 @@ export default function FinalForm() {
           </div>
           <button
             onClick={() => setOk(true)}
-            className="bg-green-500 rounded-lg p-3 w-full md:w-2/3 lg:w-1/3  mt-12 text-xl"
+            className="bg-green-500 rounded-lg p-3 w-full md:w-2/3 lg:w-1/3  mt-12 text-xl text-white"
           >
             Rezerwuję!
           </button>

@@ -23,8 +23,8 @@ export interface IPost {
 
 export const RecentPosts = ({ posts }: { posts: IPost[] }) => {
   return (
-    <div>
-      <h1 className="font-sans italic font-light p-3 text-black bg-rose-200 rounded-md w-max text-xs sm:text-lg">
+    <div className="pb-12">
+      <h1 className="font-sans italic font-light p-3 text-black bg-rose-200 rounded-md w-max">
         /{" "}
         <Link href="/" className="hover:underline hover:underline-offset-2">
           home
@@ -37,8 +37,11 @@ export const RecentPosts = ({ posts }: { posts: IPost[] }) => {
           blog
         </Link>{" "}
       </h1>
+      <h1 className="text-white text-3xl font-bold mt-6 font-sans">
+        Wszystkie posty
+      </h1>
       <div className="w-full flex flex-col lg:flex-row mt-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2  gap-4">
           {posts?.map((post: IPost, idx: number) => (
             <div
               key={idx}
@@ -72,7 +75,7 @@ export const RecentPosts = ({ posts }: { posts: IPost[] }) => {
             </div>
           ))}
         </div>
-        <div className="w-full lg:w-2/5 h-max rounded-md flex flex-col ml-6">
+        <div className="w-full lg:w-2/5 h-max rounded-md flex flex-col lg:ml-6 mt-6 lg:mt-0">
           <div className="overflow-hidden w-full relative">
             <Link
               href="/rezerwacje"
@@ -87,8 +90,7 @@ export const RecentPosts = ({ posts }: { posts: IPost[] }) => {
             ></video>
           </div>
           <div className="flex flex-col mt-6 font-sans bg-rose-200 text-black p-3 rounded-lg">
-            <h1>Witam na moim blogu</h1>
-            <h2 className="mt-6">
+            <h2>
               Na tym blogu znajdziesz wiele cennych porad dotyczących
               pielęgnacji paznokci, zarówno dłoni, jak i stóp. Udostępniam tu
               przystępne i krok po kroku tutoriale, które pomogą Ci stworzyć

@@ -11,7 +11,7 @@ export default function BlogInviter({ posts }: { posts: IPost[] }) {
       <h1 className="text-3xl text-left w-[90vw]  p-3 pl-0 font-sans mb-3 rounded-lg mx-auto font-bold text-white">
         Zajrzyj na bloga
       </h1>
-      <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-5 space-x-3 space-y-3 w-[90vw] mx-auto">
+      <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-5 sm:space-x-3 mt-3 w-[90vw] mx-auto">
         {posts?.map((post: IPost, idx: number) => (
           <div
             key={idx}

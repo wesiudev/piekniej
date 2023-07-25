@@ -121,7 +121,9 @@ export default function VideoGallery({ videos }: { videos: IVideo[] }) {
               alt={img.desc}
               className="h-auto w-full rounded-lg block group-hover:hidden group-hover:bg-white"
             />
-            <p className="absolute right-1 bottom-1 font-sans">{img.length}</p>
+            <p className="absolute right-1 bottom-1 font-sans text-white">
+              {img.length}
+            </p>
             <video
               onClick={() => setCurrentVideo(idx + 1)}
               width={124}

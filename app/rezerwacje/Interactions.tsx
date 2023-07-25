@@ -65,7 +65,7 @@ export default function Interactions({ services }: { services: IService[] }) {
   }
 
   return (
-    <div>
+    <div className="text-white">
       <div className="w-1 h-1" ref={nodeRef}></div>
       {chosenService.name && (
         <h1 className={`bg-rose-500 p-3 text-white font-bold rounded-xl mt-6`}>

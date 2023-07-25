@@ -35,7 +35,7 @@ export default async function Page({ params }) {
       <div className="w-[90vw]  mx-auto">
         <div className="">
           <div className="w-full font-sans pb-6">
-            <h1 className="font-sans italic font-light p-3 text-black bg-rose-200 rounded-md w-max text-xs sm:text-lg">
+            <h1 className="font-sans italic font-light p-3 text-black bg-rose-200 rounded-md max-w-full  sm:text-lg">
               /{" "}
               <Link
                 href="/"
@@ -68,7 +68,7 @@ export default async function Page({ params }) {
                     alt="Post Image Manicure Grudziądz"
                     className="filter blur-sm object-cover brightness-50 w-full"
                   />
-                  <h1 className="text-3xl w-4/5 rounded-xl text-center mx-auto absolute left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%]">
+                  <h1 className="text-white text-3xl w-4/5 rounded-xl text-center mx-auto absolute left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%]">
                     {post.title}
                   </h1>
                 </div>

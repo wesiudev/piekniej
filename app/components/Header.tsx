@@ -23,8 +23,8 @@ export const Header = () => {
           </Link>
         </div>
         <div className="z-[1600] sm:z-50 fixed sm:relative bottom-0 left-[50%] -translate-x-[50%] lg:left-0 lg:translate-x-0 w-screen sm:w-[90vw] sm:mt-12 lg:mt-0 mx-auto lg:w-max">
-          <div className="bg-rose-500 lg:bg-transparent flex flex-row w-full lg:w-max lg:justify-start lg:items-end lg:space-x-3 items-center h-max lg:h-full lg:pt-6 font-sans text-white lg:flex-wrap mx-auto">
-            <div className="flex flex-row sm:flex-row-reverse space-x-3 justify-between w-2/3 lg:w-max">
+          <div className="bg-rose-500 lg:bg-transparent flex flex-row w-full lg:w-max lg:justify-start lg:items-end  items-center h-max lg:h-full lg:pt-6 font-sans text-white lg:flex-wrap mx-auto">
+            <div className="flex flex-row sm:flex-row-reverse  justify-between w-2/3 lg:w-max">
               <button
                 onClick={() => setContactOpen(!isContactOpen)}
                 className="hover:bg-rose-400 lg:rounded-md italic pt-3 pb-2 sm:py-3 px-3 lg:px-6 bg-rose-500 text-xl lg:text-lg w-full lg:w-max text-center flex flex-col sm:flex-row items-center justify-center lg:border-2 lg:border-transparent lg:hover:border-white"
@@ -38,7 +38,7 @@ export const Header = () => {
               </button>
               <Link
                 href="/"
-                className="hover:bg-rose-400 lg:rounded-md italic pt-3 pb-2 sm:py-3 px-3 lg:px-6 bg-rose-500 text-xl lg:text-lg w-full lg:w-max text-center flex flex-col sm:flex-row items-center justify-center lg:border-2 lg:border-transparent lg:hover:border-white"
+                className="hover:bg-rose-400 mx-3 lg:rounded-md italic pt-3 pb-2 sm:py-3 px-3 lg:px-6 bg-rose-500 text-xl lg:text-lg w-full lg:w-max text-center flex flex-col sm:flex-row items-center justify-center lg:border-2 lg:border-transparent lg:hover:border-white"
               >
                 <FaHome className="sm:mr-1" />
                 <span>Home</span>
@@ -46,7 +46,7 @@ export const Header = () => {
             </div>
             <Link
               href="/blog"
-              className="hover:bg-rose-400 lg:rounded-md w-1/3 italic space-x-3 pt-3 pb-2 sm:py-3 px-3 lg:px-6 bg-rose-500 text-xl lg:text-lg lg:w-max text-center flex flex-col sm:flex-row items-center justify-center lg:border-2 lg:border-transparent lg:hover:border-white"
+              className="hover:bg-rose-400 lg:rounded-md w-1/3 italic mx-3  pt-3 pb-2 sm:py-3 px-3 lg:px-6 bg-rose-500 text-xl lg:text-lg lg:w-max text-center flex flex-col sm:flex-row items-center justify-center lg:border-2 lg:border-transparent lg:hover:border-white"
             >
               <FaBlog className="sm:mr-1" /> <span>Blog</span>
             </Link>
