@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     icon: "/favicon.png",
   },
 };
-
+export const dynamic = "auto";
 export default function RootLayout({
   children,
 }: {
