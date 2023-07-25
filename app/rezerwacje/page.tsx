@@ -17,7 +17,7 @@ async function getServicesList() {
 export default async function Reservations() {
   const { services } = await getServicesList();
   return (
-    <div className="w-[90vw] mx-auto pb-12">
+    <div className="w-[90vw] mx-auto pb-12 pt-6">
       <h1 className="font-sans italic font-light p-3 text-black bg-rose-200 rounded-md max-w-full">
         /{" "}
         <Link href="/" className="hover:underline hover:underline-offset-2">

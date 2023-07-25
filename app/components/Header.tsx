@@ -38,7 +38,7 @@ export const Header = () => {
               </button>
               <Link
                 href="/"
-                className="hover:bg-rose-400 mx-3 lg:rounded-md italic pt-3 pb-2 sm:py-3 px-3 lg:px-6 bg-rose-500 text-xl lg:text-lg w-full lg:w-max text-center flex flex-col sm:flex-row items-center justify-center lg:border-2 lg:border-transparent lg:hover:border-white"
+                className="hover:bg-rose-400 sm:mx-3 lg:rounded-md italic pt-3 pb-2 sm:py-3 px-3 lg:px-6 bg-rose-500 text-xl lg:text-lg w-full lg:w-max text-center flex flex-col sm:flex-row items-center justify-center lg:border-2 lg:border-transparent lg:hover:border-white"
               >
                 <FaHome className="sm:mr-1" />
                 <span>Home</span>
@@ -46,7 +46,7 @@ export const Header = () => {
             </div>
             <Link
               href="/blog"
-              className="hover:bg-rose-400 lg:rounded-md w-1/3 italic mx-3  pt-3 pb-2 sm:py-3 px-3 lg:px-6 bg-rose-500 text-xl lg:text-lg lg:w-max text-center flex flex-col sm:flex-row items-center justify-center lg:border-2 lg:border-transparent lg:hover:border-white"
+              className="hover:bg-rose-400 lg:rounded-md w-1/3 italic sm:mx-3  pt-3 pb-2 sm:py-3 px-3 lg:px-6 bg-rose-500 text-xl lg:text-lg lg:w-max text-center flex flex-col sm:flex-row items-center justify-center lg:border-2 lg:border-transparent lg:hover:border-white"
             >
               <FaBlog className="sm:mr-1" /> <span>Blog</span>
             </Link>

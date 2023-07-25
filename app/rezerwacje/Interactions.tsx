@@ -89,7 +89,7 @@ export default function Interactions({ services }: { services: IService[] }) {
           </div>
         </h1>
       )}
-      <div className="grid grid-cols-2 lg:grid-cols-3 mt-6 w-full lg:w-max space-2 lg:space-6">
+      <div className="grid grid-cols-2 lg:grid-cols-3 mt-6 w-full lg:w-max gap-3 lg:gap-6">
         {services.map((service: any, idx: number) => (
           <button
             onClick={() =>
