@@ -88,7 +88,7 @@ export default function VideoGallery({ videos }: { videos: IVideo[] }) {
                     setMuted(!isMuted);
                     e.stopPropagation();
                   }}
-                  className="bg-black bg-opacity-70 group-hover:bg-opacity-80 rounded-full p-2 sm:p-3 lg:p-4 border border-white"
+                  className="bg-black bg-opacity-70 group-hover:bg-opacity-80 rounded-full p-2 sm:p-3 lg:p-4 border border-white text-white"
                 >
                   {isMuted && <FaVolumeMute className="w-6 h-6" />}
                   {!isMuted && <FaVolumeUp className="w-6 h-6" />}
