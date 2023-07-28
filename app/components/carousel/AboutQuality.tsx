@@ -34,7 +34,9 @@ export default function AboutQuality({ carousel }: { carousel: ICarousel[] }) {
       setWasEndVisible(false);
     }
     if (scrollAmount === -100) {
-      setCurrentScroll(currentScroll - scrollAmount * 2);
+      if (currentScroll <= 0) {
+        setCurrentScroll(currentScroll - scrollAmount * 2);
+      }
     }
   };
   useEffect(() => {
@@ -109,10 +111,12 @@ export default function AboutQuality({ carousel }: { carousel: ICarousel[] }) {
                   <p className="w-full mt-6">{item.content}</p>
                 </div>
 
-                <div
-                  ref={endOfCarousel}
-                  className="hidden lg:block absolute w-12 h-full lg:-right-32"
-                ></div>
+                {idx === 3 && (
+                  <div
+                    ref={endOfCarousel}
+                    className="hidden lg:block absolute w-[30vw] h-full lg:-right-[30vw] lg:top-24 "
+                  ></div>
+                )}
               </div>
             ))}
           </div>
