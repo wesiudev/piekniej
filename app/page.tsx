@@ -3,7 +3,8 @@ import { Announcer } from "./components/Announcer";
 import { Reserve } from "./components/Reserve";
 import { ServicesGrid } from "./components/ServicesGrid";
 import BlogInviter from "./components/BlogInviter";
-import AboutQuality from "./components/AboutQuality";
+import AboutQuality from "./components/carousel/AboutQuality";
+import Carousel from "./components/carousel/Carousel";
 async function getServicesList() {
   const req = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/services`);
   // Recommendation: handle errors
@@ -41,7 +42,7 @@ export default async function Home() {
       <Announcer />
       <ServicesGrid services={services} />
       <Reserve />
-      <AboutQuality carousel={carousel} />
+      <Carousel carousel={carousel} />
       <BlogInviter posts={posts.posts} />
     </>
   );
