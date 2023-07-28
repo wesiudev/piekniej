@@ -10,7 +10,7 @@ export const Announcer = () => {
               <FaArrowRight />
             </div>{" "}
             <FaInfoCircle className="-left-11 top-[2px] hidden lg:absolute" />
-            Warto zarezerwować czas dla siebie!
+            Warto poświęcić czas dla siebie!
           </h1>
           <h2 className="text-xl sm:text-2xl font-sans h-full items-center font-light  flex mt-6 w-[90vw] sm:w-3/4 justify-center sm:justify-start mx-auto">
             Poświęcenie czasu na wykonanie manicure daje szansę na relaks,

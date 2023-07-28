@@ -18,22 +18,8 @@ export default async function Reservations() {
   const { services } = await getServicesList();
   return (
     <div className="w-[90vw] mx-auto pb-12 pt-6">
-      <h1 className="font-sans italic font-light p-3 text-black bg-rose-200 rounded-md max-w-full">
-        /{" "}
-        <Link href="/" className="hover:underline hover:underline-offset-2">
-          home
-        </Link>{" "}
-        /{" "}
-        <Link
-          href={`/rezerwacje`}
-          className="hover:underline hover:underline-offset-2"
-        >
-          rezerwacje
-        </Link>
-      </h1>
-      <div className="bg-rose-500 p-3 lg:p-6 rounded-md mt-8 text-white">
-        <h1 className="text-4xl font-bold ">Wybierz usługę</h1>
-        <h2 className="text-xl sm:text-2xl pt-3">Cena usługi mogą różnić:</h2>
+      <div className="bg-rose-500 p-3 rounded-md mt-8 text-white">
+        <h2 className="text-xl sm:text-2xl">Cena usługi może się różnić:</h2>
         <ul className="text-xl ">
           <li className="flex flex-row items-center">
             <div className="w-max h-max">

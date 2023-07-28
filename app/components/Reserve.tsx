@@ -1,5 +1,6 @@
 // "use client";
 
+import Link from "next/link";
 import { FaCalendarCheck } from "react-icons/fa";
 
 export const Reserve = () => {
@@ -10,14 +11,20 @@ export const Reserve = () => {
           <FaCalendarCheck className="h-24 w-24 mr-6 hidden lg:block" />
           <div className="w-full">
             <h1 className="flex flex-row items-center text-3xl font-bold w-full ">
-              Rezerwacje online
+              Rezerwacja manicure online
             </h1>
-            <h2 className="font-light w-full pt-6 flex flex-col sm:flex-row items-center lg:pr-[12vw]  text-xl lg:text-2xl relative">
+            <h2 className="font-light w-full pt-6 flex flex-col sm:flex-row items-center lg:pr-[12vw] mb-6 text-xl lg:text-2xl relative">
               Na stronie istnieje możliwość zarezerwowania spotkania poprzez
               wybranie dogodnego terminu oraz skontaktowanie się w celu
               ustalenia dokładnej lokalizacji. Możliwy jest również dojazd do
               klientów.
             </h2>
+            <Link
+              className="from-rose-500 to-purple-500  bg-gradient-to-tr hover:from-rose-400 hover:to-purple-400 duration-150 text-white px-3 py-2 rounded-md text-2xl"
+              href="/rezerwacje"
+            >
+              Zarezerwuj teraz!
+            </Link>
           </div>
         </div>
       </div>

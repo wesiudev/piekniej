@@ -190,31 +190,31 @@ export const GalleryGrid = () => {
               </h1>
               <div className="flex flex-col text-white">
                 <Link
-                  href="/"
+                  href="https://www.instagram.com/piekniej_aniazebrowska/"
                   className="flex flex-row items-center text-2xl w-full hover:bg-rose-300 rounded-md p-1 relative"
                 >
                   <div className="absolute right-3  top-[50%] -translate-y-[50%]">
-                    <FaLink className="text-white"/>
+                    <FaLink className="text-white" />
                   </div>
                   <FaFacebook className="h-12 w-12 text-blue-400 mr-3" />
                   Facebook
                 </Link>
                 <Link
-                  href="/"
+                  href="https://www.instagram.com/piekniej_aniazebrowska/"
                   className="flex flex-row items-center text-2xl mt-3 w-full hover:bg-rose-300 rounded-md p-1 relative"
                 >
                   <div className="absolute right-3  top-[50%] -translate-y-[50%]">
-                    <FaLink className="text-white"/>
+                    <FaLink className="text-white" />
                   </div>
                   <FaInstagram className="h-12 w-12 mr-3 bg-gradient-to-b from-rose-400 via-purple-400 to-rose-400 bg-opacity-75 rounded-full p-2" />
                   Instagram
                 </Link>
                 <Link
-                  href="/"
+                  href="https://www.instagram.com/piekniej_aniazebrowska/"
                   className="flex flex-row items-center text-2xl mt-3 w-full hover:bg-rose-300 rounded-md p-1 relative"
                 >
                   <div className="absolute right-3 top-[50%] -translate-y-[50%]">
-                    <FaLink className="text-white"/>
+                    <FaLink className="text-white" />
                   </div>
                   <FaPinterestP className="h-12 w-12 text-white mr-3 bg-red-500 rounded-full p-2" />
                   Pinterest

@@ -7,7 +7,7 @@ import { FaBook } from "react-icons/fa";
 
 export default function BlogInviter({ posts }: { posts: IPost[] }) {
   return (
-    <div className="w-full flex flex-col   bg-rose-300 pb-6">
+    <div className="w-full flex flex-col   bg-rose-300 pb-6 pt-12">
       <h1 className="text-3xl text-left w-[90vw]  p-3 pl-0 font-sans mb-3 rounded-lg mx-auto font-bold text-white">
         Zajrzyj na bloga
       </h1>

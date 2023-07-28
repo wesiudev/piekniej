@@ -3,6 +3,7 @@ import { Announcer } from "./components/Announcer";
 import { Reserve } from "./components/Reserve";
 import { ServicesGrid } from "./components/ServicesGrid";
 import BlogInviter from "./components/BlogInviter";
+import AboutQuality from "./components/AboutQuality";
 async function getServicesList() {
   const req = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/services`);
   // Recommendation: handle errors
@@ -13,6 +14,16 @@ async function getServicesList() {
   const services = req.json();
   return services;
 }
+async function getCarouselData() {
+  const req = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/carousel`);
+  // Recommendation: handle errors
+  if (!req.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
+  const carousel = req.json();
+  return carousel;
+}
 
 async function getBlogData() {
   const req = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/blog`);
@@ -22,6 +33,7 @@ async function getBlogData() {
 
 export default async function Home() {
   const { services } = await getServicesList();
+  const { carousel } = await getCarouselData();
   const { posts } = await getBlogData();
   return (
     <>
@@ -29,6 +41,7 @@ export default async function Home() {
       <Announcer />
       <ServicesGrid services={services} />
       <Reserve />
+      <AboutQuality carousel={carousel} />
       <BlogInviter posts={posts.posts} />
     </>
   );

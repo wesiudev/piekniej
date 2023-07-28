@@ -147,7 +147,7 @@ export default function FinalForm() {
             {/* Second row */}
 
             {/* Input for "Imię" */}
-            <div className="relative h-max w-full">
+            <div className="relative h-max w-full mt-10 sm:mt-0">
               <input
                 className={`p-3 outline-none focus:shadow-md focus:shadow-rose-500 w-full z-5 text-black`}
                 type="text"

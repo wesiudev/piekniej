@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pl">
+    <html lang="pl" className="scrollbar ">
       <body
         className={`${cocosharp.variable} ${parisienne.variable}
        w-full `}

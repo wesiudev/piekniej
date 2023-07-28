@@ -7,11 +7,15 @@ const MonthView = ({
   chosenService,
   setHour,
   hour,
+  setTimeToRead,
+  isLoading,
 }: {
   setChosenService: Function;
   chosenService: any;
   setHour: Function;
   hour: string;
+  setTimeToRead: Function;
+  isLoading: boolean;
 }) => {
   moment.locale("pl");
   // Get the start date (today + 2 days)
@@ -46,7 +50,7 @@ const MonthView = ({
 
   const [hoveredMonth, setHoveredMonth] = useState(null);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
-
+  const [isTimeChosen, setTimeChosen] = useState(false);
   const handleMouseEnter = (month: any) => {
     setHoveredMonth(month);
   };
@@ -67,14 +71,19 @@ const MonthView = ({
     <div onMouseMove={handleMouseMove}>
       {weeks.map((weekData, weekIndex) => (
         <div key={weekIndex}>
-          <p className="my-2 text-3xl font-bold">
+          <p
+            className={`my-4 text-3xl font-bold ${weekIndex === 0 && "mt-12"}`}
+          >
             {capitalizeFirstLetter(weekData.monthName)}
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 ">
             {weekData.days.map((day, dayIndex) => (
-              <div key={dayIndex} className="flex flex-col">
+              <div key={dayIndex} className="flex flex-col relative">
                 <button
-                  onClick={() => setChosenService(day, weekData.monthName)}
+                  onClick={() => {
+                    setChosenService(day, weekData.monthName);
+                    setTimeChosen(false);
+                  }}
                   className={`${
                     (
                       chosenService.time.month + chosenService.time.day
@@ -87,67 +96,63 @@ const MonthView = ({
                 >
                   {day}
                 </button>
-                {(
-                  chosenService.time.month + chosenService.time.day
-                ).toString() === (weekData.monthName + day).toString() && (
-                  <div className="flex flex-col">
-                    <div className="grid grid-cols-2 md:grid-cols-3 text-center gap-3 mt-3 mb-1">
-                      <button
-                        onClick={() => setHour("16:00")}
-                        className={`bg-rose-400 p-3 rounded-md border-2 hover:border-white ${
-                          hour === "16:00"
-                            ? "border-white"
-                            : "border-transparent"
-                        }`}
-                      >
-                        16:00
-                      </button>
-                      <button
-                        onClick={() => setHour("17:00")}
-                        className={`bg-rose-400 p-3 rounded-md border-2 hover:border-white ${
-                          hour === "17:00"
-                            ? "border-white"
-                            : "border-transparent"
-                        }`}
-                      >
-                        17:00
-                      </button>
-                      <button
-                        onClick={() => setHour("18:00")}
-                        className={`bg-rose-400 p-3 rounded-md border-2 hover:border-white ${
-                          hour === "18:00"
-                            ? "border-white"
-                            : "border-transparent"
-                        }`}
-                      >
-                        18:00
-                      </button>
-                    </div>
+
+                <div
+                  className={`${
+                    (
+                      chosenService.time.month + chosenService.time.day
+                    ).toString() === (weekData.monthName + day).toString() &&
+                    !isTimeChosen &&
+                    !isLoading
+                      ? "scale-100 translate-y-[-36px] z-[1690]"
+                      : "scale-0 translate-y-48"
+                  } bg-rose-500 duration-1000 shadow-md shadow-black rounded-lg p-6 fixed left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] flex flex-col w-4/5 lg:w-max`}
+                >
+                  <h1 className="text-2xl">
+                    {capitalizeFirstLetter(chosenService.time.month)} {day}
+                  </h1>
+                  <h1 className="text-2xl mt-3">Dostępne godziny:</h1>
+                  <div className="grid grid-cols-2 md:grid-cols-3 text-center gap-3 mt-3 mb-1">
+                    <button
+                      onClick={() => {
+                        setHour("16:00");
+                        setTimeChosen(true);
+                      }}
+                      className={`bg-rose-400 p-3 rounded-md border-2 hover:border-white ${
+                        hour === "16:00" ? "border-white" : "border-transparent"
+                      }`}
+                    >
+                      16:00
+                    </button>
+                    <button
+                      onClick={() => {
+                        setHour("17:00");
+                        setTimeChosen(true);
+                      }}
+                      className={`bg-rose-400 p-3 rounded-md border-2 hover:border-white ${
+                        hour === "17:00" ? "border-white" : "border-transparent"
+                      }`}
+                    >
+                      17:00
+                    </button>
+                    <button
+                      onClick={() => {
+                        setHour("18:00");
+                        setTimeChosen(true);
+                      }}
+                      className={`bg-rose-400 p-3 rounded-md border-2 hover:border-white ${
+                        hour === "18:00" ? "border-white" : "border-transparent"
+                      }`}
+                    >
+                      18:00
+                    </button>
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>
         </div>
       ))}
-
-      {hoveredMonth && (
-        <div
-          className="text-black hidden sm:block"
-          style={{
-            position: "fixed",
-            left: tooltipPosition.x - 50,
-            top: tooltipPosition.y - 50,
-            background: "#fff",
-            padding: "5px",
-            border: "1px solid #ccc",
-            borderRadius: "4px",
-            zIndex: 9999,
-          }}
-        >
-          <p className="px-2 italic">{capitalizeFirstLetter(hoveredMonth)}</p>
-        </div>
-      )}
     </div>
   );
 };
