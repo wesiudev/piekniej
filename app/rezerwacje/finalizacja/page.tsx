@@ -1,5 +1,6 @@
 "use client";
 
+import { addClientRequest } from "@/firebase";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
@@ -83,7 +84,7 @@ export default function FinalForm() {
       <h1 className="bg-rose-500 text-3xl md:text-5xl p-3 rounded-lg text-center font-bold hidden lg:block">
         Podsumowanie
       </h1>
-      <div className="grid grid-cols-1 lg:flex  bg-rose-400 p-6 rounded-lg lg:mt-6">
+      <div className="grid grid-cols-1 lg:flex flex-row  bg-rose-400 p-6 rounded-lg lg:mt-6">
         <div className="flex flex-col items-center">
           <h2 className="text-5xl sm:text-6xl rounded-lg mb-6 md:mb-12 mt:12 md:mt-0 leading-relaxed text-white">
             Szczegóły
@@ -103,14 +104,14 @@ export default function FinalForm() {
             <span className="font-bold text-3xl "> Dojazd: </span>
             <br />
             <span className="underline underline-offset-2">
-              {drive === "Tak" ? "Tak" : "Nie"}
+              {drive === "tak" ? "Tak" : "Nie"}
             </span>
           </div>
         </div>
 
         {/* form */}
         {/* first row */}
-        <div className="flex flex-col w-full h-max md:ml-48">
+        <div className="flex flex-col w-full h-max lg:ml-48">
           <h2 className="text-5xl sm:text-6xl text-center md:text-left rounded-lg mb-6 md:mb-12 mt:12 md:mt-0 leading-relaxed text-white">
             Informacje
           </h2>
@@ -339,8 +340,13 @@ export default function FinalForm() {
             </div>
           </div>
           <button
-            onClick={() => setOk(true)}
-            className="bg-green-500 rounded-lg p-3 w-full md:w-2/3 lg:w-1/3  mt-12 text-xl text-white"
+            onClick={() => {
+              setOk(true);
+              addClientRequest({
+                data: { data, dojazd: drive, dzien: date, usluga: name },
+              });
+            }}
+            className="bg-green-500 rounded-lg p-3 w-full md:w-2/3 lg:w-1/3  mt-12 text-xl text-white mx-auto"
           >
             Rezerwuję!
           </button>

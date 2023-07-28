@@ -5,6 +5,7 @@ import {
   getDocs,
   query,
   orderBy,
+  addDoc,
 } from "firebase/firestore/lite";
 
 const firebaseConfig = {
@@ -20,6 +21,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 const dbRef = collection(db, "piekniej");
+const requestsRef = collection(db, "piekniej", "clients", "requests");
 
 async function getBlogPosts() {
   const filter = query(dbRef);
@@ -28,4 +30,8 @@ async function getBlogPosts() {
   return posts[0];
 }
 
-export { getBlogPosts };
+async function addClientRequest(req) {
+  await addDoc(requestsRef, req.data);
+}
+
+export { getBlogPosts, addClientRequest };
