@@ -72,12 +72,12 @@ export default function FinalForm() {
   return (
     <div className="w-[90vw] mx-auto pb-12 pt-12 lg:pt-0 relative">
       {isOk && (
-        <div className="fixed left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] w-max h-max p-6 bg-black z-[1500] flex flex-col">
+        <div className="fixed left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] w-max h-max p-6 bg-black z-[1500] flex flex-col rounded-md">
           <div className=" text-white">
-            Super! Możesz teraz wpłacić zaliczkę.
+            Dziękuję za rezerwacje. Odezwę się do ciebie w przeciągu 24 godzin!
           </div>
           <Link className="bg-red-500 p-3 rounded-lg mx-auto" href="/">
-            Zapłać
+            Zakończ
           </Link>
         </div>
       )}
